@@ -1,0 +1,82 @@
+/*MEDIA QUERY - DESKTOP*/
+@media screen and (min-width: 769px){
+
+    /*HEADER + NAV*/
+    
+    header{
+        height: 8vh; 
+        position: fixed;
+        flex-direction: row;
+    
+        .navbar{
+            width: 100%;
+            
+            .linknav{
+                padding:0.5vh 0.5vh;
+                font-size: 1em;
+            }
+        }
+    }
+
+    /*MAIN*/
+    main{
+        padding-top: 8vh;
+    }
+
+    /*FOOTER*/
+    .footerDiv{
+        height: auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+    
+        .divFooter1{
+            flex-direction: column;
+            justify-items: start;
+    
+            .logo{
+                height: 5vh;
+                margin-top: 5vw;
+            }
+    
+            .divFooter1div1{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5vw;
+            }
+        }
+    
+        .divFooter2{
+            display: flex;
+            flex-direction: column;
+            
+            .aFooter{
+                transition: 1s;
+                text-decoration: none;
+    
+                &:hover{
+                    color: #6768ab;
+                }
+            }
+        }
+    
+        .divFooter3{
+            display: flex;
+            flex-direction: column;
+    
+            .divFooter3div1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+    
+                .redesSocialesLogo{
+                    height: 2vh;
+                }
+                
+                .facebookLogo{
+                    margin: 0 1.5vh 0 1.5vh;
+                }
+            }
+        }
+    }
+
+}

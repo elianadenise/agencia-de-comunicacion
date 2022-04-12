@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+}
+
+/*GENERAL*/
+
+/*HEADER*/
+
+header{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    box-shadow: 0 0 0.7vh 0;
+    box-shadow: #2F2A26/20%;
+    z-index: 10;
+
+    .navbar{
+        width: 100%;
+
+        img{
+            display: flex;
+            padding-left: 7vw;
+            height: 5vh;
+        }        
+
+        .collapse{
+            flex-grow:0;
+        }
+
+        ul{
+            list-style-type: none;
+            height: 8vh;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-right: 7vw;
+
+            li{
+                display: flex;
+                text-decoration: none;
+
+                a{
+                    color: #000;
+                    transition: 1s;
+                    text-decoration: none;
+                    border-bottom: solid 0.3vh transparent;
+                    font-weight:500;
+
+                    &:hover{
+                        color: #6768ab;
+                        border-bottom: solid 0.3vh #6768ab;
+                    }
+
+                    &::selection{
+                    background-color: #6768ab;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
+/*FOOTER*/
+
+.footerDiv{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    .divFooter1{
+        display: flex;
+        flex-direction: column;
+    
+        .divLinealFooter1{
+            @include divLineal(100%, 0, 0.1vh, 0, 0.5vh 0);
+        }
+    
+        .divFooter1div1{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .divFooter2{
+        display: flex;
+        flex-direction: column;
+    
+            .aFooter{
+                transition: 1s;
+                text-decoration: none;
+                color: #000;
+    
+                &:hover{
+                    color: #6768ab;
+                }
+            }
+        }
+    
+    .divFooter3{
+        display: flex;
+        flex-direction: column;
+    
+        .redesSocialesLogo{
+            color: #000;
+
+            &:hover{
+                color: #6768ab;
+            }
+        }
+    
+        .facebookLogo{
+            margin: 0 1.5vw 0 1.5vw;
+        }
+    
+        .divLinealFooter2{
+            @include divLineal(100%, 0, 0.1vh, 0, 0)
+        }
+    
+        .aFooter{
+            transition: 1s;
+            text-decoration: none;
+            color: #000;
+    
+            &:hover{
+                color: #6768ab;
+            }
+        }
+    }
+}
+
+.credito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    
+    p{
+        margin: 1vh 0 0.5vh 0;
+    }
+}
+
+/*FUENTES*/
+h1{
+    font-family: $fuenteTitulos;
+    color: #fff;
+    line-height: 1,5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: $sombraTexto;
+    font-weight: 400;
+    text-justify: center;
+    text-align: center;
+}
+
+h2{
+    font-family: $fuenteTitulos;
+    color:#000;
+    text-justify: center;
+    text-align: center;
+}
+
+.h2-w{
+    @extend h2;
+    color:#fff;
+    text-justify: center;
+    text-align: center;
+}
+
+h3{
+
+    font-weight: 500;
+}
+
+.h3--centrado{
+    @extend h3;
+    text-align: center;
+    text-justify: center;
+    text-transform: $mayuscula;
+}
+
+.fuente--color-black{
+    color: #000;
+    font-weight: 0;
+    line-height: 1.5;
+}
+
+/*fuente de formulario*/
+.fuente__form{
+    font-size: 0.9em;
+    color: #000;
+    padding-left: 1vh;
+}
+
+.fuente--color-white{
+    font-size: 1em;
+    color: #fff;
+}
