@@ -1,3 +1,4 @@
+/*LINEAS HORIZONTALES*/
 * {
   margin: 0;
   padding: 0; }
@@ -47,9 +48,77 @@ header {
           header .navbar ul li a::selection {
             background-color: #6768ab; }
 
+/*MAIN*/
+/*BANNER*/
+/*SERVICIOS*/
+/*QUIENES SOMOS + STAFF*/
+/*CLIENTES*/
+/*CONTACTO*/
+.contacto {
+  display: grid;
+  height: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf9f9; }
+  .contacto .titulo {
+    grid-area: titulo; }
+    .contacto .titulo span {
+      background: linear-gradient(#A39CFF, #845CFF);
+      -webkit-background-clip: text;
+      color: transparent; }
+  .contacto .sede {
+    grid-area: sede;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .email {
+    grid-area: email;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .whatsapp {
+    grid-area: whatsapp;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .instagram {
+    grid-area: instagram;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .desc1 {
+    grid-area: desc1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .contacto .desc2 {
+    grid-area: desc2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .desc3 {
+    grid-area: desc3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+  .contacto .desc4 {
+    grid-area: desc4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+
 /*FOOTER*/
 .footerDiv {
-  background-color: #fff;
+  background-color: #000;
   width: 100%;
   display: flex;
   align-items: center; }
@@ -67,7 +136,7 @@ header {
       display: flex;
       align-self: center;
       justify-self: center;
-      border-color: #000;
+      border-color: #fff;
       border-style: solid; }
     .footerDiv .divFooter1 .divFooter1div1 {
       display: flex;
@@ -78,14 +147,14 @@ header {
     .footerDiv .divFooter2 .aFooter {
       transition: 1s;
       text-decoration: none;
-      color: #000; }
+      color: #fff; }
       .footerDiv .divFooter2 .aFooter:hover {
         color: #6768ab; }
   .footerDiv .divFooter3 {
     display: flex;
     flex-direction: column; }
     .footerDiv .divFooter3 .redesSocialesLogo {
-      color: #000; }
+      color: #fff; }
       .footerDiv .divFooter3 .redesSocialesLogo:hover {
         color: #6768ab; }
     .footerDiv .divFooter3 .facebookLogo {
@@ -101,7 +170,7 @@ header {
       display: flex;
       align-self: center;
       justify-self: center;
-      border-color: #000;
+      border-color: #fff;
       border-style: solid; }
     .footerDiv .divFooter3 .aFooter {
       transition: 1s;
@@ -115,9 +184,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000; }
+  background-color: #fff; }
   .credito p {
-    margin: 1vh 0 0.5vh 0; }
+    margin: 1vh 0;
+    color: #000; }
 
 /*FUENTES*/
 h1 {
@@ -131,40 +201,68 @@ h1 {
   font-weight: 400;
   text-justify: center;
   text-align: center; }
+  h1::selection {
+    background-color: #EFEFFC; }
 
 h2, .h2-w {
   font-family: "Oswald", sans-serif;
   color: #000;
   text-justify: center;
   text-align: center; }
+  h2::selection, .h2-w::selection {
+    background-color: #EFEFFC; }
 
 .h2-w {
   color: #fff;
   text-justify: center;
   text-align: center; }
+  .h2-w::selection {
+    background-color: #EFEFFC; }
 
 h3, .h3--centrado {
   font-weight: 500; }
+  h3::selection, .h3--centrado::selection {
+    background-color: #EFEFFC; }
 
 .h3--centrado {
   text-align: center;
   text-justify: center;
   text-transform: uppercase; }
+  .h3--centrado::selection {
+    background-color: #EFEFFC; }
 
 .fuente--color-black {
   color: #000;
   font-weight: 0;
   line-height: 1.5; }
-
-/*fuente de formulario*/
-.fuente__form {
-  font-size: 0.9em;
-  color: #000;
-  padding-left: 1vh; }
+  .fuente--color-black::selection {
+    background-color: #EFEFFC; }
 
 .fuente--color-white {
   font-size: 1em;
   color: #fff; }
+  .fuente--color-white::selection {
+    background-color: #EFEFFC; }
+
+/*BOTON*/
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #845CFF;
+  transition: 1s;
+  display: flex;
+  border: 0.1vh solid #845CFF;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  justify-content: center;
+  align-content: center; }
+  .btn:hover {
+    background-color: #A39CFF;
+    color: #fff; }
+  .btn::selection {
+    background-color: #A39CFF; }
 
 /*MEDIA QUERY - DESKTOP*/
 @media screen and (min-width: 769px) {
@@ -181,6 +279,33 @@ h3, .h3--centrado {
   /*MAIN*/
   main {
     padding-top: 8vh; }
+  /*BANNER*/
+  .banner {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    background-color: #EFEFFC;
+    justify-content: space-around; }
+    .banner div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-justify: center;
+      padding: 0 40vh; }
+    .banner img {
+      height: 60vh; }
+  /*SERVICIOS*/
+  /*QUIENES SOMOS + STAFF*/
+  /*CLIENTES*/
+  /*CONTACTO*/
+  .contacto {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15vh 15vh 20vh;
+    grid-template-areas: "titulo titulo titulo titulo" "sede email whatsapp instagram" "desc1 desc2 desc3 desc4"; }
+    .contacto .titulo {
+      margin: 0 0 0 5vh; }
   /*FOOTER*/
   .footerDiv {
     height: auto;

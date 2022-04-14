@@ -69,10 +69,107 @@ header{
 }
 
 
+/*MAIN*/
+
+/*BANNER*/
+
+/*SERVICIOS*/
+
+/*QUIENES SOMOS + STAFF*/
+
+/*CLIENTES*/
+
+/*CONTACTO*/
+.contacto{
+    display: grid;
+    height: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf9f9;
+
+    .titulo{
+        grid-area: titulo;
+
+        span{
+            background: linear-gradient(#A39CFF,#845CFF);
+            -webkit-background-clip: text;
+            color: transparent;  
+        }
+    }
+
+    .sede{
+        grid-area:sede;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .email{
+        grid-area: email;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp{
+        grid-area: whatsapp;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instagram{
+        grid-area: instagram;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc1{
+        grid-area: desc1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc2{
+        grid-area: desc2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc3{
+        grid-area: desc3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc4{
+        grid-area: desc4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
 /*FOOTER*/
 
 .footerDiv{
-    background-color: #fff;
+    background-color: #000;
     width: 100%;
     display: flex;
     align-items: center;
@@ -98,7 +195,7 @@ header{
             .aFooter{
                 transition: 1s;
                 text-decoration: none;
-                color: #000;
+                color: #fff;
     
                 &:hover{
                     color: #6768ab;
@@ -111,7 +208,7 @@ header{
         flex-direction: column;
     
         .redesSocialesLogo{
-            color: #000;
+            color: #fff;
 
             &:hover{
                 color: #6768ab;
@@ -143,10 +240,11 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #fff;
     
     p{
-        margin: 1vh 0 0.5vh 0;
+        margin: 1vh 0;
+        color: #000;
     }
 }
 
@@ -162,6 +260,10 @@ h1{
     font-weight: 400;
     text-justify: center;
     text-align: center;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
 
 h2{
@@ -169,6 +271,10 @@ h2{
     color:#000;
     text-justify: center;
     text-align: center;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
 
 .h2-w{
@@ -176,34 +282,74 @@ h2{
     color:#fff;
     text-justify: center;
     text-align: center;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
 
 h3{
 
     font-weight: 500;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
+
 
 .h3--centrado{
     @extend h3;
     text-align: center;
     text-justify: center;
     text-transform: $mayuscula;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
 
 .fuente--color-black{
     color: #000;
     font-weight: 0;
     line-height: 1.5;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
 }
 
-/*fuente de formulario*/
-.fuente__form{
-    font-size: 0.9em;
-    color: #000;
-    padding-left: 1vh;
-}
 
 .fuente--color-white{
     font-size: 1em;
     color: #fff;
+
+    &::selection{
+        background-color: #EFEFFC;
+    }
+}
+
+/*BOTON*/
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: #845CFF;
+    transition: 1s;
+    display: flex;
+    border: 0.1vh solid #845CFF;
+    border-radius: $redondeado;
+    text-transform: $mayuscula;
+    font-family: $fuenteTextos;
+    font-weight: 700;
+    justify-content: center;
+    align-content: center;
+
+    &:hover{
+        background-color: #A39CFF;
+        color: #fff;
+    }
+
+    &::selection{
+        background-color: #A39CFF;
+    }
 }
