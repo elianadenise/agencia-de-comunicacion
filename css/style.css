@@ -51,6 +51,28 @@ header {
 /*MAIN*/
 /*BANNER*/
 /*SERVICIOS*/
+.servicios {
+  display: grid;
+  height: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; }
+  .servicios .serv1, .servicios .serv2, .servicios .serv3, .servicios .serv4, .servicios .serv5, .servicios .serv6, .servicios .serv7, .servicios .serv8 {
+    padding: 0 0 2vh 0;
+    border: solid 0.1vh transparent;
+    border-radius: 0.3em;
+    background-color: #fff;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column; }
+    .servicios .serv1:hover, .servicios .serv2:hover, .servicios .serv3:hover, .servicios .serv4:hover, .servicios .serv5:hover, .servicios .serv6:hover, .servicios .serv7:hover, .servicios .serv8:hover {
+      filter: drop-shadow(0 0.2vh 0.2vh #797979);
+      border: solid 0.1vh #6768ab;
+      background-color: #fff; }
+    .servicios .serv1 ul, .servicios .serv2 ul, .servicios .serv3 ul, .servicios .serv4 ul, .servicios .serv5 ul, .servicios .serv6 ul, .servicios .serv7 ul, .servicios .serv8 ul {
+      list-style-type: circle; }
+
 /*QUIENES SOMOS + STAFF*/
 /*CLIENTES*/
 /*CONTACTO*/
@@ -63,10 +85,6 @@ header {
   background-color: #faf9f9; }
   .contacto .titulo {
     grid-area: titulo; }
-    .contacto .titulo span {
-      background: linear-gradient(#A39CFF, #845CFF);
-      -webkit-background-clip: text;
-      color: transparent; }
   .contacto .sede {
     grid-area: sede;
     display: flex;
@@ -234,13 +252,15 @@ h3, .h3--centrado {
 .fuente--color-black {
   color: #000;
   font-weight: 0;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif; }
   .fuente--color-black::selection {
     background-color: #EFEFFC; }
 
 .fuente--color-white {
   font-size: 1em;
-  color: #fff; }
+  color: #fff;
+  font-family: "Roboto", sans-serif; }
   .fuente--color-white::selection {
     background-color: #EFEFFC; }
 
@@ -256,8 +276,8 @@ h3, .h3--centrado {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  justify-content: center;
-  align-content: center; }
+  justify-self: center;
+  align-self: center; }
   .btn:hover {
     background-color: #A39CFF;
     color: #fff; }
@@ -297,6 +317,76 @@ h3, .h3--centrado {
     .banner img {
       height: 60vh; }
   /*SERVICIOS*/
+  .servicios {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15vh auto auto 15vh;
+    grid-template-areas: "titulo titulo titulo titulo" "serv1 serv2 serv3 serv4" "serv5 serv6 serv7 serv8" "btn btn btn btn"; }
+    .servicios .titulo {
+      margin: 0 0 0 5vh; }
+    .servicios .serv1 {
+      grid-area: serv1;
+      justify-self: center;
+      align-self: start; }
+    .servicios .serv2 {
+      grid-area: serv2;
+      justify-self: center;
+      align-self: start;
+      margin-bottom: 2vh; }
+    .servicios .serv3 {
+      grid-area: serv3;
+      justify-self: center;
+      align-self: start; }
+    .servicios .serv4 {
+      grid-area: serv4;
+      justify-self: center;
+      align-self: start; }
+    .servicios .serv5 {
+      grid-area: serv5;
+      justify-self: center;
+      align-self: start;
+      margin-bottom: 2vh; }
+    .servicios .serv6 {
+      grid-area: serv6;
+      justify-self: center;
+      align-self: start; }
+    .servicios .serv7 {
+      grid-area: serv7;
+      justify-self: center;
+      align-self: start; }
+    .servicios .serv8 {
+      grid-area: serv8;
+      justify-self: center;
+      align-self: start; }
+    .servicios .boton {
+      grid-area: btn;
+      text-align: center;
+      text-justify: center; }
+  /*ADN*/
+  .adn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    background: #ce97fb;
+    background: radial-gradient(circle, #ce97fb 0%, #faa99d 100%); }
+    .adn div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3vh;
+      justify-content: space-around; }
+      .adn div div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-justify: center;
+        padding: 0 7vh; }
+        .adn div div i {
+          margin-bottom: 2vh; }
   /*QUIENES SOMOS + STAFF*/
   /*CLIENTES*/
   /*CONTACTO*/
@@ -315,7 +405,7 @@ h3, .h3--centrado {
       flex-direction: column;
       justify-items: start; }
       .footerDiv .divFooter1 .logo {
-        height: 5vh;
+        height: 7vh;
         margin-top: 5vw; }
       .footerDiv .divFooter1 .divFooter1div1 {
         display: flex;
