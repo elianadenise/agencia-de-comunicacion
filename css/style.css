@@ -9,13 +9,12 @@ body {
 /*GENERAL*/
 /*HEADER*/
 header {
-  background-color: #fff;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  box-shadow: 0 0 0.7vh 0;
-  box-shadow: #2F2A26/20%;
   z-index: 10; }
   header .navbar {
     width: 100%; }
@@ -57,23 +56,27 @@ header {
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #fff; }
+  background: #faa99d;
+  background: linear-gradient(0deg, #faa99d 0%, #ce97fb 100%); }
   .servicios .serv1, .servicios .serv2, .servicios .serv3, .servicios .serv4, .servicios .serv5, .servicios .serv6, .servicios .serv7, .servicios .serv8 {
     padding: 0 0 2vh 0;
-    border: solid 0.1vh transparent;
+    border: solid 0.1vh #F6A5EB;
     border-radius: 0.3em;
-    background-color: #fff;
+    background-color: #E6C9FE;
     transition: 1.5s;
     display: flex;
     flex-direction: column; }
     .servicios .serv1:hover, .servicios .serv2:hover, .servicios .serv3:hover, .servicios .serv4:hover, .servicios .serv5:hover, .servicios .serv6:hover, .servicios .serv7:hover, .servicios .serv8:hover {
       filter: drop-shadow(0 0.2vh 0.2vh #797979);
-      border: solid 0.1vh #6768ab;
-      background-color: #fff; }
-    .servicios .serv1 ul, .servicios .serv2 ul, .servicios .serv3 ul, .servicios .serv4 ul, .servicios .serv5 ul, .servicios .serv6 ul, .servicios .serv7 ul, .servicios .serv8 ul {
-      list-style-type: circle; }
+      border: solid 0.1vh transparent;
+      background-color: #9BFBE1; }
 
 /*QUIENES SOMOS + STAFF*/
+/*ADN*/
+.adn {
+  background: #fddf7e;
+  background: linear-gradient(0deg, #fddf7e 0%, #faa99d 100%); }
+
 /*CLIENTES*/
 /*CONTACTO*/
 .contacto {
@@ -82,7 +85,8 @@ header {
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #faf9f9; }
+  background: #9bfbe1;
+  background: linear-gradient(0deg, #9bfbe1 0%, #fddf7e 100%); }
   .contacto .titulo {
     grid-area: titulo; }
   .contacto .sede {
@@ -224,7 +228,8 @@ h1 {
 
 h2, .h2-w {
   font-family: "Oswald", sans-serif;
-  color: #000;
+  color: #fff;
+  text-shadow: #000 0.1em 0.1em 0.2em;
   text-justify: center;
   text-align: center; }
   h2::selection, .h2-w::selection {
@@ -303,9 +308,10 @@ h3, .h3--centrado {
   .banner {
     display: flex;
     flex-direction: row;
-    height: 60vh;
-    background-color: #EFEFFC;
-    justify-content: space-around; }
+    height: 70vh;
+    justify-content: space-around;
+    background: #ce97fb;
+    background: linear-gradient(0deg, #ce97fb 0%, #9bfbe1 50%, white 100%); }
     .banner div {
       display: flex;
       flex-direction: column;
@@ -315,48 +321,55 @@ h3, .h3--centrado {
       text-justify: center;
       padding: 0 40vh; }
     .banner img {
-      height: 60vh; }
+      height: 60vh;
+      padding: 5vh 15vh 5vh 0; }
   /*SERVICIOS*/
   .servicios {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 15vh auto auto 15vh;
     grid-template-areas: "titulo titulo titulo titulo" "serv1 serv2 serv3 serv4" "serv5 serv6 serv7 serv8" "btn btn btn btn"; }
     .servicios .titulo {
-      margin: 0 0 0 5vh; }
+      grid-area: titulo; }
     .servicios .serv1 {
       grid-area: serv1;
-      justify-self: center;
-      align-self: start; }
-    .servicios .serv2 {
-      grid-area: serv2;
-      justify-self: center;
+      justify-self: right;
       align-self: start;
       margin-bottom: 2vh; }
+    .servicios .serv2 {
+      grid-area: serv2;
+      justify-self: right;
+      align-self: start;
+      margin-right: 5vh; }
     .servicios .serv3 {
       grid-area: serv3;
-      justify-self: center;
-      align-self: start; }
+      justify-self: left;
+      align-self: start;
+      margin-left: 5vh; }
     .servicios .serv4 {
       grid-area: serv4;
-      justify-self: center;
+      justify-self: left;
       align-self: start; }
     .servicios .serv5 {
       grid-area: serv5;
-      justify-self: center;
+      justify-self: right;
       align-self: start;
       margin-bottom: 2vh; }
     .servicios .serv6 {
       grid-area: serv6;
-      justify-self: center;
-      align-self: start; }
+      justify-self: right;
+      align-self: start;
+      margin-right: 5vh; }
     .servicios .serv7 {
       grid-area: serv7;
-      justify-self: center;
-      align-self: start; }
+      justify-self: left;
+      align-self: start;
+      margin-left: 5vh; }
     .servicios .serv8 {
       grid-area: serv8;
-      justify-self: center;
+      justify-self: left;
       align-self: start; }
+    .servicios p {
+      font-size: 0.9em; }
     .servicios .boton {
       grid-area: btn;
       text-align: center;
@@ -367,15 +380,17 @@ h3, .h3--centrado {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5vh 0;
-    background: #ce97fb;
-    background: radial-gradient(circle, #ce97fb 0%, #faa99d 100%); }
+    padding: 10vh 0; }
+    .adn img {
+      position: relative;
+      height: 15vh;
+      margin-top: 5vh; }
     .adn div {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-top: 3vh;
+      margin-top: 5vh;
       justify-content: space-around; }
       .adn div div {
         display: flex;

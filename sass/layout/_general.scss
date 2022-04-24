@@ -12,13 +12,12 @@ body{
 /*HEADER*/
 
 header{
-    background-color: #fff;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    box-shadow: 0 0 0.7vh 0;
-    box-shadow: #2F2A26/20%;
     z-index: 10;
 
     .navbar{
@@ -74,36 +73,41 @@ header{
 /*BANNER*/
 
 /*SERVICIOS*/
+
 .servicios{
     display: grid;
     height: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background: rgb(250,169,157);
+    background: linear-gradient(0deg, rgba(250,169,157,1) 0%, rgba(206,151,251,1) 100%);
 
     .serv1, .serv2, .serv3, .serv4, .serv5, .serv6, .serv7, .serv8{
         padding: 0 0 2vh 0;
-        border: solid 0.1vh transparent;
+        border: solid 0.1vh #F6A5EB;
         border-radius: $redondeado;
-        background-color: #fff;
+        background-color: #E6C9FE;
         transition: 1.5s;
         display: flex;
         flex-direction: column;
 
         &:hover{
             filter: $sombraImg;
-            border: solid 0.1vh #6768ab;
-            background-color: #fff;
-        }
-
-        ul{
-            list-style-type:circle;
+            border: solid 0.1vh transparent;
+            background-color: #9BFBE1;
         }
     }
 }
 
 /*QUIENES SOMOS + STAFF*/
+
+/*ADN*/
+.adn{
+    background: rgb(253,223,126);
+    background: linear-gradient(0deg, rgba(253,223,126,1) 0%, rgba(250,169,157,1) 100%);
+
+}
 
 /*CLIENTES*/
 
@@ -114,7 +118,8 @@ header{
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #faf9f9;
+    background: rgb(155,251,225);
+    background: linear-gradient(0deg, rgba(155,251,225,1) 0%, rgba(253,223,126,1) 100%);
 
     .titulo{
         grid-area: titulo;
@@ -290,7 +295,8 @@ h1{
 
 h2{
     font-family: $fuenteTitulos;
-    color:#000;
+    color: #fff;
+    text-shadow: $sombraTexto;
     text-justify: center;
     text-align: center;
 
@@ -311,7 +317,6 @@ h2{
 }
 
 h3{
-
     font-weight: 500;
 
     &::selection{
