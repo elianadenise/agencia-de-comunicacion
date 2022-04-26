@@ -124,71 +124,52 @@ header {
 /*CLIENTES*/
 /*CONTACTO*/
 .contacto {
-  display: grid;
-  height: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #9bfbe1;
-  background: linear-gradient(0deg, #9bfbe1 0%, #fddf7e 100%); }
-  .contacto .titulo {
-    grid-area: titulo; }
-  .contacto .sede {
-    grid-area: sede;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .email {
-    grid-area: email;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .whatsapp {
-    grid-area: whatsapp;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .instagram {
-    grid-area: instagram;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .desc1 {
-    grid-area: desc1;
+  background: #000; }
+  .contacto .titulo1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(255, 255, 255, 0.605);
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: -35px;
+    margin-left: -15px; }
+  .contacto .titulo2 {
+    margin-top: 3vh;
+    font-size: 65px; }
+
+.contactoFlex {
+  background-color: #000; }
+  .contactoFlex .sede, .contactoFlex .email, .contactoFlex .whatsapp {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-  .contacto .desc2 {
-    grid-area: desc2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .desc3 {
-    grid-area: desc3;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-  .contacto .desc4 {
-    grid-area: desc4;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; }
+    justify-content: start;
+    align-items: center; }
+    .contactoFlex .sede div, .contactoFlex .email div, .contactoFlex .whatsapp div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2vh; }
+    .contactoFlex .sede p, .contactoFlex .sede h3, .contactoFlex .sede i, .contactoFlex .email p, .contactoFlex .email h3, .contactoFlex .email i, .contactoFlex .whatsapp p, .contactoFlex .whatsapp h3, .contactoFlex .whatsapp i {
+      color: #fff;
+      line-height: 1.2; }
+      .contactoFlex .sede p a, .contactoFlex .sede h3 a, .contactoFlex .sede i a, .contactoFlex .email p a, .contactoFlex .email h3 a, .contactoFlex .email i a, .contactoFlex .whatsapp p a, .contactoFlex .whatsapp h3 a, .contactoFlex .whatsapp i a {
+        text-decoration: none;
+        color: #fff;
+        transition: 1s; }
+        .contactoFlex .sede p a:hover, .contactoFlex .sede h3 a:hover, .contactoFlex .sede i a:hover, .contactoFlex .email p a:hover, .contactoFlex .email h3 a:hover, .contactoFlex .email i a:hover, .contactoFlex .whatsapp p a:hover, .contactoFlex .whatsapp h3 a:hover, .contactoFlex .whatsapp i a:hover {
+          color: #CE97FB; }
 
 /*FOOTER*/
 .footerDiv {
-  background-color: #000;
+  background-color: #0e0e0e;
   width: 100%;
   display: flex;
   align-items: start;
-  padding: 5vh 0 3vh 0; }
+  padding: 5vh 0 2vh 0; }
   .footerDiv .divFooter1 {
     display: flex;
     flex-direction: column; }
@@ -204,7 +185,7 @@ header {
     .footerDiv .divFooter1 p {
       color: #dbdada;
       font-size: 14px;
-      line-height: 1; }
+      line-height: 1.5; }
   .footerDiv .divFooter2 {
     display: flex;
     flex-direction: column; }
@@ -265,7 +246,7 @@ header {
         color: #dbdada;
         font-size: 12px; }
         .footerDiv .divFooter3 .divFooter3div1 .e1:hover {
-          color: #9BFBE1; }
+          color: #CE97FB; }
       .footerDiv .divFooter3 .divFooter3div1 .e2 {
         transition: 1s;
         text-decoration: none;
@@ -286,14 +267,14 @@ header {
         color: #dbdada;
         font-size: 12px; }
         .footerDiv .divFooter3 .divFooter3div1 .e4:hover {
-          color: #CE97FB; }
+          color: #FAA990; }
 
 .credito {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000; }
+  background-color: #0e0e0e; }
   .credito .divLineal {
     width: 70%;
     height: 0;
@@ -375,6 +356,12 @@ h3 {
     color: #fff; }
   .btn::selection {
     background-color: #A39CFF; }
+
+/*WHATSAPP*/
+.whatsappfijo {
+  position: fixed;
+  display: inline-block;
+  filter: drop-shadow(0 0.2vh 0.2vh #797979); }
 
 /*MEDIA QUERY - DESKTOP*/
 @media screen and (min-width: 769px) {
@@ -491,11 +478,23 @@ h3 {
   /*CLIENTES*/
   /*CONTACTO*/
   .contacto {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 15vh 15vh 20vh;
-    grid-template-areas: "titulo titulo titulo titulo" "sede email whatsapp instagram" "desc1 desc2 desc3 desc4"; }
-    .contacto .titulo {
-      margin: 0 0 0 5vh; }
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0; }
+  .contactoFlex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sede email wpp";
+    padding-bottom: 10vh; }
+    .contactoFlex .sede {
+      grid-area: sede; }
+    .contactoFlex .email {
+      grid-area: email; }
+    .contactoFlex .whatsapp {
+      grid-area: wpp; }
+    .contactoFlex p {
+      font-size: 18px; }
   /*FOOTER*/
   .footerDiv {
     height: auto;
@@ -509,4 +508,8 @@ h3 {
       .footerDiv .divFooter1 .divFooter1div1 {
         display: flex;
         flex-direction: column;
-        margin-bottom: 5vw; } }
+        margin-bottom: 5vw; }
+  .whatsappfijo {
+    right: 3vh;
+    bottom: 5vh;
+    height: 5vh; } }

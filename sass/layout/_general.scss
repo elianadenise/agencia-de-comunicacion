@@ -167,94 +167,70 @@ header{
 
 /*CONTACTO*/
 .contacto{
-    display: grid;
-    height: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(155,251,225);
-    background: linear-gradient(0deg, rgba(155,251,225,1) 0%, rgba(253,223,126,1) 100%);
+    background: #000;
 
-    .titulo{
-        grid-area: titulo;
+    .titulo1{
+        font-family: 'Times New Roman', Times, serif;
+        color: rgba(255, 255, 255, 0.605);
+        font-size: 40px;
+        font-style: italic;
+        margin-bottom: -35px;
+        margin-left: -15px;
     }
 
-    .sede{
-        grid-area:sede;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .email{
-        grid-area: email;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .whatsapp{
-        grid-area: whatsapp;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .instagram{
-        grid-area: instagram;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .desc1{
-        grid-area: desc1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .desc2{
-        grid-area: desc2;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .desc3{
-        grid-area: desc3;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .desc4{
-        grid-area: desc4;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    .titulo2{
+        margin-top: 3vh;
+        font-size: 65px;
     }
 }
 
+.contactoFlex{
+    background-color: #000;
 
+    .sede, .email, .whatsapp{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2vh;
+        }
+
+        p, h3, i{
+            color: #fff;
+            line-height: 1.2;
+            
+            a{
+                text-decoration: none;
+                color: #fff;
+                transition: 1s;
+
+                &:hover{
+                    color: #CE97FB;
+                }
+            }
+        }
+    }
+}
 
 
 /*FOOTER*/
 
 .footerDiv{
-    background-color: #000;
+    background-color: rgb(14, 14, 14);
     width: 100%;
     display: flex;
     align-items: start;
-    padding: 5vh 0 3vh 0;
+    padding: 5vh 0 2vh 0;
     
     .divFooter1{
         display: flex;
@@ -276,7 +252,7 @@ header{
         p{
             color: rgb(219, 218, 218);
             font-size: 14px;
-            line-height: 1;
+            line-height: 1.5;
         }
     }
     
@@ -372,7 +348,7 @@ header{
                 font-size: 12px;
     
                 &:hover{
-                    color: #9BFBE1;
+                    color: #CE97FB;
                 }
             }
 
@@ -405,7 +381,7 @@ header{
                 font-size: 12px;
     
                 &:hover{
-                    color: #CE97FB;
+                    color: #FAA990;
                 }
             }
         }
@@ -417,7 +393,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: rgb(14, 14, 14);
 
     .divLineal{
         @include divLineal(70%, 0, 0.1vh, 0, 0.5vh 0 0 0)
@@ -515,4 +491,11 @@ h3 {
     &::selection{
         background-color: #A39CFF;
     }
+}
+
+/*WHATSAPP*/
+.whatsappfijo{
+    position: fixed;
+    display: inline-block;
+    filter: $sombraImg; 
 }

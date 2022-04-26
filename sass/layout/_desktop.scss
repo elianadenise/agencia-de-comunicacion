@@ -169,18 +169,35 @@
 
     /*CONTACTO*/
     .contacto{
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 15vh 15vh 20vh;
-        grid-template-areas: "titulo titulo titulo titulo"
-                            "sede email whatsapp instagram"
-                            "desc1 desc2 desc3 desc4";
-
-                            .titulo{
-                                margin: 0 0 0 5vh;
-                            }
-
-
+        justify-content: center;
+        align-items: center;
+        padding: 10vh 0;
     }
+
+    .contactoFlex{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "sede email wpp";
+        padding-bottom: 10vh;
+
+        .sede{
+            grid-area: sede;
+        }
+
+        .email{
+            grid-area: email;
+        }
+
+        .whatsapp{
+            grid-area: wpp;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
 
     /*FOOTER*/
     .footerDiv{
@@ -203,6 +220,12 @@
             }
         }
 
+    }
+
+    .whatsappfijo{
+        right: 3vh;
+        bottom: 5vh;
+        height: 5vh;
     }
 
 }
