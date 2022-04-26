@@ -209,13 +209,23 @@ header{
             color: #fff;
             line-height: 1.2;
             
-            a{
+            .a1{
                 text-decoration: none;
                 color: #fff;
                 transition: 1s;
 
                 &:hover{
                     color: #CE97FB;
+                }
+            }
+
+            .a2{
+                text-decoration: none;
+                color: #fff;
+                transition: 1s;
+
+                &:hover{
+                    color: #9BFBE1;
                 }
             }
         }

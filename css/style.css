@@ -156,12 +156,18 @@ header {
     .contactoFlex .sede p, .contactoFlex .sede h3, .contactoFlex .sede i, .contactoFlex .email p, .contactoFlex .email h3, .contactoFlex .email i, .contactoFlex .whatsapp p, .contactoFlex .whatsapp h3, .contactoFlex .whatsapp i {
       color: #fff;
       line-height: 1.2; }
-      .contactoFlex .sede p a, .contactoFlex .sede h3 a, .contactoFlex .sede i a, .contactoFlex .email p a, .contactoFlex .email h3 a, .contactoFlex .email i a, .contactoFlex .whatsapp p a, .contactoFlex .whatsapp h3 a, .contactoFlex .whatsapp i a {
+      .contactoFlex .sede p .a1, .contactoFlex .sede h3 .a1, .contactoFlex .sede i .a1, .contactoFlex .email p .a1, .contactoFlex .email h3 .a1, .contactoFlex .email i .a1, .contactoFlex .whatsapp p .a1, .contactoFlex .whatsapp h3 .a1, .contactoFlex .whatsapp i .a1 {
         text-decoration: none;
         color: #fff;
         transition: 1s; }
-        .contactoFlex .sede p a:hover, .contactoFlex .sede h3 a:hover, .contactoFlex .sede i a:hover, .contactoFlex .email p a:hover, .contactoFlex .email h3 a:hover, .contactoFlex .email i a:hover, .contactoFlex .whatsapp p a:hover, .contactoFlex .whatsapp h3 a:hover, .contactoFlex .whatsapp i a:hover {
+        .contactoFlex .sede p .a1:hover, .contactoFlex .sede h3 .a1:hover, .contactoFlex .sede i .a1:hover, .contactoFlex .email p .a1:hover, .contactoFlex .email h3 .a1:hover, .contactoFlex .email i .a1:hover, .contactoFlex .whatsapp p .a1:hover, .contactoFlex .whatsapp h3 .a1:hover, .contactoFlex .whatsapp i .a1:hover {
           color: #CE97FB; }
+      .contactoFlex .sede p .a2, .contactoFlex .sede h3 .a2, .contactoFlex .sede i .a2, .contactoFlex .email p .a2, .contactoFlex .email h3 .a2, .contactoFlex .email i .a2, .contactoFlex .whatsapp p .a2, .contactoFlex .whatsapp h3 .a2, .contactoFlex .whatsapp i .a2 {
+        text-decoration: none;
+        color: #fff;
+        transition: 1s; }
+        .contactoFlex .sede p .a2:hover, .contactoFlex .sede h3 .a2:hover, .contactoFlex .sede i .a2:hover, .contactoFlex .email p .a2:hover, .contactoFlex .email h3 .a2:hover, .contactoFlex .email i .a2:hover, .contactoFlex .whatsapp p .a2:hover, .contactoFlex .whatsapp h3 .a2:hover, .contactoFlex .whatsapp i .a2:hover {
+          color: #9BFBE1; }
 
 /*FOOTER*/
 .footerDiv {
