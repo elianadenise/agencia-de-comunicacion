@@ -187,7 +187,10 @@ header {
       .footerDiv .divFooter1 a p {
         color: #dbdada;
         font-size: 20px;
-        font-weight: 600; }
+        font-weight: 600;
+        transition: 1s; }
+        .footerDiv .divFooter1 a p:hover {
+          color: #CE97FB; }
     .footerDiv .divFooter1 p {
       color: #dbdada;
       font-size: 14px;
@@ -367,7 +370,11 @@ h3 {
 .whatsappfijo {
   position: fixed;
   display: inline-block;
-  filter: drop-shadow(0 0.2vh 0.2vh #797979); }
+  filter: drop-shadow(0 0.2vh 0.2vh #797979);
+  color: #fff;
+  transition: 1s; }
+  .whatsappfijo:hover {
+    color: #25D366; }
 
 /*MEDIA QUERY - DESKTOP*/
 @media screen and (min-width: 769px) {
@@ -517,5 +524,4 @@ h3 {
         margin-bottom: 5vw; }
   .whatsappfijo {
     right: 3vh;
-    bottom: 5vh;
-    height: 5vh; } }
+    bottom: 5vh; } }

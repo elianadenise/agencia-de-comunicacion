@@ -256,6 +256,11 @@ header{
                 color: rgb(219, 218, 218);
                 font-size: 20px;
                 font-weight: 600;
+                transition: 1s;
+
+                &:hover{
+                    color: #CE97FB;
+                }
             }
         }
 
@@ -507,5 +512,11 @@ h3 {
 .whatsappfijo{
     position: fixed;
     display: inline-block;
-    filter: $sombraImg; 
+    filter: $sombraImg;
+    color: #fff;
+    transition: 1s;
+
+    &:hover{
+        color: #25D366;
+    }
 }
