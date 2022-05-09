@@ -1,117 +1,151 @@
-/*LINEAS HORIZONTALES*/
-* {
-  margin: 0;
-  padding: 0; }
+@charset "UTF-8";
+.mainHome .services .servicesContenido h3, .mainHome .services .servicesPlaneacion h3, .mainHome .services .servicesWeb h3, .mainHome .services .servicesPubli h3, .mainHome .services .servicesPr h3, .mainHome .services .servicesEventos h3, .mainHome .services .servicesDigital h3, .mainHome .services .servicesProdu h3 {
+  position: absolute;
+  bottom: 2vw;
+  opacity: 1;
+  text-align: center;
+  padding: 20px; }
 
-body {
-  background-color: #fff; }
+.mainHome .services .servicesContenido .servicesContenidoGif, .mainHome .services .servicesPlaneacion .servicesContenidoGif, .mainHome .services .servicesWeb .servicesContenidoGif, .mainHome .services .servicesPubli .servicesContenidoGif, .mainHome .services .servicesPr .servicesContenidoGif, .mainHome .services .servicesEventos .servicesContenidoGif, .mainHome .services .servicesDigital .servicesContenidoGif, .mainHome .services .servicesProdu .servicesContenidoGif {
+  height: 7vw;
+  width: 7vw;
+  position: absolute;
+  top: 3vw;
+  opacity: 1; }
+  .mainHome .services .servicesContenido .servicesContenidoGif img, .mainHome .services .servicesPlaneacion .servicesContenidoGif img, .mainHome .services .servicesWeb .servicesContenidoGif img, .mainHome .services .servicesPubli .servicesContenidoGif img, .mainHome .services .servicesPr .servicesContenidoGif img, .mainHome .services .servicesEventos .servicesContenidoGif img, .mainHome .services .servicesDigital .servicesContenidoGif img, .mainHome .services .servicesProdu .servicesContenidoGif img {
+    border-radius: 100px; }
 
-/*GENERAL*/
-/*HEADER*/
-header {
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  z-index: 10; }
-  header .navbar {
-    width: 100%; }
-    header .navbar img {
-      display: flex;
-      padding-left: 7vw;
-      height: 5vh; }
-    header .navbar .collapse {
-      flex-grow: 0; }
-    header .navbar ul {
-      list-style-type: none;
-      height: 8vh;
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding-right: 7vw; }
-      header .navbar ul li {
-        display: flex;
-        text-decoration: none; }
-        header .navbar ul li a {
-          color: #000;
-          transition: 1s;
-          text-decoration: none;
-          border-bottom: solid 0.3vh transparent;
-          font-weight: 500; }
-          header .navbar ul li a:hover {
-            color: #6768ab;
-            border-bottom: solid 0.3vh #6768ab; }
-          header .navbar ul li a::selection {
-            background-color: #6768ab; }
-
-/*MAIN*/
-/*BANNER*/
-/*SERVICIOS*/
-.servicios {
-  display: grid;
-  height: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background: #faa99d;
-  background: linear-gradient(0deg, #faa99d 0%, #ce97fb 100%); }
-  .servicios .serv1, .servicios .serv2, .servicios .serv3, .servicios .serv4, .servicios .serv5, .servicios .serv6, .servicios .serv7, .servicios .serv8 {
-    padding: 0 0 2vh 0;
-    border: solid 0.1vh #F6A5EB;
-    border-radius: 0.3em;
-    background-color: #E6C9FE;
-    transition: 1.5s;
-    display: flex;
-    flex-direction: column; }
-    .servicios .serv1:hover, .servicios .serv2:hover, .servicios .serv3:hover, .servicios .serv4:hover, .servicios .serv5:hover, .servicios .serv6:hover, .servicios .serv7:hover, .servicios .serv8:hover {
-      filter: drop-shadow(0 0.2vh 0.2vh #797979);
-      border: solid 0.1vh transparent;
-      background-color: #9BFBE1; }
-
-/*QUIENES SOMOS + STAFF*/
-/*ADN*/
-.adn {
-  width: 100%;
-  color: #fff;
-  background: linear-gradient(45deg, #67EBFA, #9BFBE1, #FDDF7E, #FAA990, #F6A5EB, #CE97FB);
-  background-size: 400% 400%;
+.mainHome .services .servicesContenido p, .mainHome .services .servicesPlaneacion p, .mainHome .services .servicesWeb p, .mainHome .services .servicesPubli p, .mainHome .services .servicesPr p, .mainHome .services .servicesEventos p, .mainHome .services .servicesDigital p, .mainHome .services .servicesProdu p {
   position: relative;
-  animation: cambiar 10s ease-out infinite;
+  opacity: 0;
+  padding: 15px; }
+
+.mainHome .services .servicesContenido:hover, .mainHome .services .servicesPlaneacion:hover, .mainHome .services .servicesWeb:hover, .mainHome .services .servicesPubli:hover, .mainHome .services .servicesPr:hover, .mainHome .services .servicesEventos:hover, .mainHome .services .servicesDigital:hover, .mainHome .services .servicesProdu:hover {
+  animation: movimiento 2s; }
+  .mainHome .services .servicesContenido:hover .servicesContenidoGif, .mainHome .services .servicesPlaneacion:hover .servicesContenidoGif, .mainHome .services .servicesWeb:hover .servicesContenidoGif, .mainHome .services .servicesPubli:hover .servicesContenidoGif, .mainHome .services .servicesPr:hover .servicesContenidoGif, .mainHome .services .servicesEventos:hover .servicesContenidoGif, .mainHome .services .servicesDigital:hover .servicesContenidoGif, .mainHome .services .servicesProdu:hover .servicesContenidoGif, .mainHome .services .servicesContenido:hover h3, .mainHome .services .servicesPlaneacion:hover h3, .mainHome .services .servicesWeb:hover h3, .mainHome .services .servicesPubli:hover h3, .mainHome .services .servicesPr:hover h3, .mainHome .services .servicesEventos:hover h3, .mainHome .services .servicesDigital:hover h3, .mainHome .services .servicesProdu:hover h3 {
+    opacity: 0; }
+  .mainHome .services .servicesContenido:hover p, .mainHome .services .servicesPlaneacion:hover p, .mainHome .services .servicesWeb:hover p, .mainHome .services .servicesPubli:hover p, .mainHome .services .servicesPr:hover p, .mainHome .services .servicesEventos:hover p, .mainHome .services .servicesDigital:hover p, .mainHome .services .servicesProdu:hover p {
+    opacity: 1; }
+
+/* LINEAS HORIZONTALES */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+/* GENERALES */
+body {
+  background-color: black; }
+  body a {
+    text-decoration: none; }
+  body img {
+    max-width: 100%; }
+  body p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    font-size: 1.1vw; }
+  body h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    font-size: 5vw;
+    font-weight: 800;
+    text-align: center; }
+  body h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: white;
+    font-size: 1.9vw;
+    font-weight: bolder;
+    text-shadow: #424242 0px 0px 10px; }
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  /** Logo **/ }
+  header nav {
+    width: 100%; }
+    header nav div a img {
+      width: 4vw;
+      margin-left: 20px; }
+    header nav .collapse {
+      flex-grow: 0; }
+
+.whatsappfijo {
+  position: fixed;
+  display: inline-block;
+  filter: drop-shadow(0 0.2vh 0.2vh #797979);
+  color: #fff;
+  transition: 1s;
+  right: 3vh;
+  bottom: 5vh;
+  z-index: 19; }
+  .whatsappfijo:hover {
+    color: #25D366; }
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  transition: 1s;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .adn .tituloAdn {
-    font-family: 'Times New Roman', Times, serif;
-    color: rgba(255, 255, 255, 0.605);
-    font-size: 65px;
-    font-style: italic;
-    margin-bottom: -35px;
-    margin-left: -15px; }
-  .adn .tituloAdn2 {
-    margin-left: 15vh;
-    font-size: 65px; }
-  .adn .card {
+  border: 0.1vh solid white;
+  border-radius: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  justify-self: center;
+  align-self: center;
+  margin: 0 0 10vh 0; }
+  .btn:hover {
+    background-color: #A39CFF;
+    border: 0.1vh solid white;
+    color: #fff; }
+  .btn::selection {
+    background-color: #A39CFF; }
+
+/* NAV BS */
+.bg-dark {
+  background-color: black !important;
+  height: 5vw;
+  border-bottom: solid 1px #272727;
+  box-shadow: black 0px 0px 10px; }
+  .bg-dark .navBsUl {
     display: flex;
-    flex-direction: column;
-    height: 350px;
-    width: 350px;
-    justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.441);
-    border-radius: 15px;
-    padding: 0 4vh; }
-    .adn .card img {
-      border-radius: 100px; }
-    .adn .card h4 {
-      color: #000;
-      font-size: 20px; }
-    .adn .card p {
-      color: #000;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-style: normal;
-      font-size: 15px; }
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1.1vw;
+    font-family: "Plus Jakarta Sans", sans-serif; }
+    .bg-dark .navBsUl li {
+      padding: 1.5%; }
+      .bg-dark .navBsUl li a {
+        border-top: solid 3px transparent; }
+      .bg-dark .navBsUl li a:hover {
+        border-top: solid 3px #CE97FB; }
+
+/* HOME */
+.mainHome {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95vh auto 100vh auto 0vh;
+  grid-template-areas: "presentacion" "servicios" "adn" "clientes" "contacto";
+  /** Presentación **/
+  /** Sevicios **/
+  /** ADN **/
+  /** Clientes: en partial _carousel **/
+  /** Contacto **/ }
+  .mainHome .presentacion {
+    grid-area: presentacion;
+    width: 100%;
+    color: #fff;
+    background: linear-gradient(45deg, #67EBFA, #9BFBE1, #FDDF7E, #FAA990, #F6A5EB, #CE97FB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiar 10s ease-out infinite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px; }
 
 @keyframes cambiar {
   0% {
@@ -120,60 +154,424 @@ header {
     background-position: 100% 50%; }
   100% {
     background-position: 0 50%; } }
+    .mainHome .presentacion .presentacionH {
+      width: 50%;
+      align-self: flex-start;
+      padding-top: 5vw; }
+      .mainHome .presentacion .presentacionH p {
+        font-family: "Times New Roman", Times, serif;
+        color: rgba(255, 255, 255, 0.605);
+        font-size: 5vw;
+        font-style: italic;
+        margin-bottom: -2.5vw;
+        margin-left: -15px; }
+      .mainHome .presentacion .presentacionH h1 {
+        font-size: 5vw;
+        color: black;
+        font-weight: 900;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 0.9; }
+      .mainHome .presentacion .presentacionH .presentacionHContainer {
+        display: flex;
+        height: auto;
+        width: 70%;
+        justify-content: center;
+        padding: 1vw;
+        background-color: rgba(255, 255, 255, 0.441);
+        border-radius: 15px;
+        margin-top: 9vw; }
+        .mainHome .presentacion .presentacionH .presentacionHContainer #subtitle {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-style: normal;
+          font-size: 1.2vw;
+          color: black;
+          padding-left: 30px; }
+        .mainHome .presentacion .presentacionH .presentacionHContainer #presentacionHContainerGif {
+          width: 3.5vw;
+          height: 3.5vw; }
+          .mainHome .presentacion .presentacionH .presentacionHContainer #presentacionHContainerGif img {
+            border-radius: 100px; }
+    .mainHome .presentacion .presentacionDownald {
+      text-align: center;
+      align-self: flex-end;
+      padding-bottom: 60px; }
+      .mainHome .presentacion .presentacionDownald .presentacionDownaldGif {
+        width: 23vw;
+        height: 23vw;
+        box-shadow: rgba(0, 0, 0, 0.612) 10px 10px 10px; }
+        .mainHome .presentacion .presentacionDownald .presentacionDownaldGif img {
+          min-width: 100%;
+          border-radius: 5px; }
+  .mainHome .services {
+    grid-area: servicios;
+    padding: 30px 10px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: auto 20vw 20vw;
+    grid-template-areas: "encabezado encabezado encabezado encabezado" "uno dos tres cuatro" "cinco seis siete ocho";
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 3vw;
+    /*** Sevicios: animaciones ***/
+    /*** Sevicios: cards y hover ***/ }
+    .mainHome .services h2 {
+      grid-area: encabezado;
+      margin: 40px; }
+    .mainHome .services p, .mainHome .services h3 {
+      transition: all 100ms; }
 
-/*CLIENTES*/
-/*CONTACTO*/
-.contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #000; }
-  .contacto .titulo1 {
-    font-family: 'Times New Roman', Times, serif;
-    color: rgba(255, 255, 255, 0.605);
-    font-size: 40px;
-    font-style: italic;
-    margin-bottom: -35px;
-    margin-left: -15px; }
-  .contacto .titulo2 {
-    margin-top: 3vh;
-    font-size: 65px; }
+@keyframes movimiento {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 0.5 !important; }
+  to {
+    opacity: 1; } }
 
-.contactoFlex {
-  background-color: #000; }
-  .contactoFlex .sede, .contactoFlex .email, .contactoFlex .whatsapp {
+@keyframes movimientoinverso {
+  from {
+    opacity: 0; }
+  50% {
+    opacity: 0.5 !important; }
+  to {
+    opacity: 1; } }
+    .mainHome .services .servicesContenido {
+      grid-area: uno;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesContenido:hover {
+      border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1; }
+    .mainHome .services .servicesPlaneacion {
+      grid-area: dos;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesPlaneacion:hover {
+      border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1; }
+    .mainHome .services .servicesWeb {
+      grid-area: tres;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesWeb:hover {
+      border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1; }
+    .mainHome .services .servicesPubli {
+      grid-area: cuatro;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesPubli:hover {
+      border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1; }
+    .mainHome .services .servicesPr {
+      grid-area: cinco;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s;
+      padding-top: 5px; }
+    .mainHome .services .servicesPr:hover {
+      border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1; }
+    .mainHome .services .servicesEventos {
+      grid-area: seis;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesEventos:hover {
+      border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1; }
+    .mainHome .services .servicesDigital {
+      grid-area: siete;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesDigital:hover {
+      border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1; }
+    .mainHome .services .servicesProdu {
+      grid-area: ocho;
+      width: 100%;
+      height: 100%;
+      border: solid 6px transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      animation: movimientoinverso 2s; }
+    .mainHome .services .servicesProdu:hover {
+      border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1; }
+  .mainHome .adn {
+    grid-area: adn;
+    color: #fff;
+    background: linear-gradient(7deg, #67EBFA, #9BFBE1, #CE97FB);
+    background-size: 400% 400%;
+    padding-bottom: 5vw;
+    text-align: center; }
+    .mainHome .adn .tituloAdn {
+      font-family: "Times New Roman", Times, serif;
+      color: rgba(255, 255, 255, 0.605);
+      font-size: 4vw;
+      font-style: italic;
+      margin: 4vw 0% -2.5vw -4vw; }
+    .mainHome .adn .tituloAdn2 {
+      margin-left: 7vw;
+      font-size: 5vw;
+      color: black;
+      font-family: "Plus Jakarta Sans", sans-serif; }
+    .mainHome .adn div {
+      display: flex;
+      justify-content: center;
+      margin-top: 3vw;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 5vw; }
+      .mainHome .adn div .card {
+        display: flex;
+        flex-direction: column;
+        height: 25vw;
+        width: 23vw;
+        justify-content: start;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.441);
+        border-radius: 15px;
+        padding: 0vh 4vh;
+        margin: 0vh 4vh;
+        border: none;
+        box-shadow: rgba(77, 77, 77, 0.221) 0px 0px 10px; }
+        .mainHome .adn div .card img {
+          border-radius: 100px;
+          width: 7vw;
+          margin: 2vw 0vw 1vw 0vw; }
+        .mainHome .adn div .card h4 {
+          color: #000;
+          font-size: 1.5vw;
+          font-weight: 600; }
+        .mainHome .adn div .card p {
+          color: black;
+          font-size: 1.2vw;
+          text-align: justify;
+          word-wrap: break-word;
+          hyphens: auto; }
+  .mainHome .contacto {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center; }
-    .contactoFlex .sede div, .contactoFlex .email div, .contactoFlex .whatsapp div {
+    .mainHome .contacto .titulo1 {
+      font-family: 'Times New Roman', Times, serif;
+      color: rgba(255, 255, 255, 0.605);
+      font-size: 40px;
+      font-style: italic;
+      margin-bottom: -35px;
+      margin-left: -15px;
+      text-align: center; }
+    .mainHome .contacto .titulo2 {
+      margin-top: 3vh;
+      font-size: 65px; }
+  .mainHome .contactoGrid {
+    display: grid;
+    margin: 10vh 0 5vh 0; }
+    .mainHome .contactoGrid .sede, .mainHome .contactoGrid .email, .mainHome .contactoGrid .whatsapp, .mainHome .contactoGrid .instagram {
+      grid-area: sede;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center; }
+    .mainHome .contactoGrid .email {
+      grid-area: email; }
+    .mainHome .contactoGrid .whatsapp {
+      grid-area: wpp; }
+    .mainHome .contactoGrid .instagram {
+      grid-area: insta; }
+    .mainHome .contactoGrid div {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       margin-bottom: 2vh; }
-    .contactoFlex .sede p, .contactoFlex .sede h3, .contactoFlex .sede i, .contactoFlex .email p, .contactoFlex .email h3, .contactoFlex .email i, .contactoFlex .whatsapp p, .contactoFlex .whatsapp h3, .contactoFlex .whatsapp i {
+    .mainHome .contactoGrid p, .mainHome .contactoGrid h3, .mainHome .contactoGrid i {
       color: #fff;
       line-height: 1.2; }
-      .contactoFlex .sede p .a1, .contactoFlex .sede h3 .a1, .contactoFlex .sede i .a1, .contactoFlex .email p .a1, .contactoFlex .email h3 .a1, .contactoFlex .email i .a1, .contactoFlex .whatsapp p .a1, .contactoFlex .whatsapp h3 .a1, .contactoFlex .whatsapp i .a1 {
+      .mainHome .contactoGrid p .a1, .mainHome .contactoGrid p .a2, .mainHome .contactoGrid p .a3, .mainHome .contactoGrid h3 .a1, .mainHome .contactoGrid h3 .a2, .mainHome .contactoGrid h3 .a3, .mainHome .contactoGrid i .a1, .mainHome .contactoGrid i .a2, .mainHome .contactoGrid i .a3 {
         text-decoration: none;
         color: #fff;
         transition: 1s; }
-        .contactoFlex .sede p .a1:hover, .contactoFlex .sede h3 .a1:hover, .contactoFlex .sede i .a1:hover, .contactoFlex .email p .a1:hover, .contactoFlex .email h3 .a1:hover, .contactoFlex .email i .a1:hover, .contactoFlex .whatsapp p .a1:hover, .contactoFlex .whatsapp h3 .a1:hover, .contactoFlex .whatsapp i .a1:hover {
+        .mainHome .contactoGrid p .a1:hover, .mainHome .contactoGrid p .a2:hover, .mainHome .contactoGrid p .a3:hover, .mainHome .contactoGrid h3 .a1:hover, .mainHome .contactoGrid h3 .a2:hover, .mainHome .contactoGrid h3 .a3:hover, .mainHome .contactoGrid i .a1:hover, .mainHome .contactoGrid i .a2:hover, .mainHome .contactoGrid i .a3:hover {
           color: #CE97FB; }
-      .contactoFlex .sede p .a2, .contactoFlex .sede h3 .a2, .contactoFlex .sede i .a2, .contactoFlex .email p .a2, .contactoFlex .email h3 .a2, .contactoFlex .email i .a2, .contactoFlex .whatsapp p .a2, .contactoFlex .whatsapp h3 .a2, .contactoFlex .whatsapp i .a2 {
-        text-decoration: none;
-        color: #fff;
-        transition: 1s; }
-        .contactoFlex .sede p .a2:hover, .contactoFlex .sede h3 .a2:hover, .contactoFlex .sede i .a2:hover, .contactoFlex .email p .a2:hover, .contactoFlex .email h3 .a2:hover, .contactoFlex .email i .a2:hover, .contactoFlex .whatsapp p .a2:hover, .contactoFlex .whatsapp h3 .a2:hover, .contactoFlex .whatsapp i .a2:hover {
-          color: #9BFBE1; }
+      .mainHome .contactoGrid p .a2:hover, .mainHome .contactoGrid h3 .a2:hover, .mainHome .contactoGrid i .a2:hover {
+        color: #9BFBE1; }
+      .mainHome .contactoGrid p .a3:hover, .mainHome .contactoGrid h3 .a3:hover, .mainHome .contactoGrid i .a3:hover {
+        color: #FAA990; }
 
 /*FOOTER*/
+.footerDiv {
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Plus Jakarta Sans", sans-serif; }
+  .footerDiv .divFooter1 {
+    flex-direction: column;
+    justify-items: start; }
+    .footerDiv .divFooter1 .logo {
+      width: 3vw; }
+    .footerDiv .divFooter1 .divFooter1div1 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5vw; }
+
+/*** Clientes - Carousel ***/
+.clients {
+  grid-area: clientes;
+  padding: 40px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2vw 0vw 8vw 0vw; }
+
+.clients h2 {
+  margin-bottom: 60px; }
+
+.clients .container {
+  min-width: 100%; }
+
+.slick-slide {
+  margin: 0px 20px;
+  width: 100%; }
+
+.slick-slide img {
+  width: 100%; }
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block; }
+
+.slick-track:before, .slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 .footerDiv {
   background-color: #0e0e0e;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: start;
   padding: 5vh 0 2vh 0; }
   .footerDiv .divFooter1 {
@@ -295,7 +693,7 @@ header {
     display: flex;
     align-self: center;
     justify-self: center;
-    border-color: #fff;
+    border-color: #313131;
     border-style: solid; }
   .credito .copyright {
     font-size: 12px; }
@@ -303,11 +701,11 @@ header {
     margin: 1vh 0;
     color: #dbdada;
     font-size: 14px; }
-    .credito p .a1 {
+    .credito p .a1, .credito .mainHome .contactoGrid p .a2, .mainHome .contactoGrid .credito p .a2, .credito p .mainHome .contactoGrid h3 .a2, .credito p .mainHome .contactoGrid i .a2, .credito .mainHome .contactoGrid p .a3, .mainHome .contactoGrid .credito p .a3, .credito p .mainHome .contactoGrid h3 .a3, .credito p .mainHome .contactoGrid i .a3 {
       color: #dbdada;
       text-decoration: none;
       transition: 1s; }
-      .credito p .a1:hover {
+      .credito p .a1:hover, .credito .mainHome .contactoGrid p .a2:hover, .mainHome .contactoGrid .credito p .a2:hover, .credito p .mainHome .contactoGrid h3 .a2:hover, .credito p .mainHome .contactoGrid i .a2:hover, .credito .mainHome .contactoGrid p .a3:hover, .mainHome .contactoGrid .credito p .a3:hover, .credito p .mainHome .contactoGrid h3 .a3:hover, .credito p .mainHome .contactoGrid i .a3:hover {
         color: #9BFBE1; }
     .credito p .a2 {
       color: #dbdada;
@@ -316,212 +714,33 @@ header {
       .credito p .a2:hover {
         color: #FAA990; }
 
-/*FUENTES*/
-p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px; }
-
-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 65px;
-  font-weight: 800; }
-
-.h2Black {
-  color: #000; }
-
-h3 {
-  color: white;
-  font-weight: bolder;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 30px;
-  text-shadow: #424242 0px 0px 10px; }
-
-.fuente--color-black {
-  color: #000;
-  font-weight: 0;
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif; }
-  .fuente--color-black::selection {
-    background-color: #EFEFFC; }
-
-/*BOTON*/
-.btn {
-  text-decoration: none;
-  color: #fff;
-  background-color: #845CFF;
-  transition: 1s;
-  display: flex;
-  border: 0.1vh solid #845CFF;
-  border-radius: 0.3em;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  justify-self: center;
-  align-self: center; }
-  .btn:hover {
-    background-color: #A39CFF;
-    color: #fff; }
-  .btn::selection {
-    background-color: #A39CFF; }
-
-/*WHATSAPP*/
-.whatsappfijo {
-  position: fixed;
-  display: inline-block;
-  filter: drop-shadow(0 0.2vh 0.2vh #797979);
-  color: #fff;
-  transition: 1s; }
-  .whatsappfijo:hover {
-    color: #25D366; }
-
 /*MEDIA QUERY - DESKTOP*/
 @media screen and (min-width: 769px) {
-  /*HEADER + NAV*/
-  header {
-    height: 8vh;
-    position: fixed;
-    flex-direction: row; }
-    header .navbar {
-      width: 100%; }
-      header .navbar .linknav {
-        padding: 0.5vh 0.5vh;
-        font-size: 1em;
-        color: #ffff; }
-  /*MAIN*/
-  main {
-    background-color: #000; }
-  /*BANNER*/
-  .banner {
-    display: flex;
-    flex-direction: row;
-    height: 70vh;
-    justify-content: space-around;
-    background: #ce97fb;
-    background: linear-gradient(0deg, #ce97fb 0%, #9bfbe1 50%, white 100%); }
-    .banner div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      text-justify: center;
-      padding: 0 40vh; }
-    .banner img {
-      height: 60vh;
-      padding: 5vh 15vh 5vh 0; }
-  /*SERVICIOS*/
-  .servicios {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 15vh auto auto 15vh;
-    grid-template-areas: "titulo titulo titulo titulo" "serv1 serv2 serv3 serv4" "serv5 serv6 serv7 serv8" "btn btn btn btn"; }
-    .servicios .titulo {
-      grid-area: titulo; }
-    .servicios .serv1 {
-      grid-area: serv1;
-      justify-self: right;
-      align-self: start;
-      margin-bottom: 2vh; }
-    .servicios .serv2 {
-      grid-area: serv2;
-      justify-self: right;
-      align-self: start;
-      margin-right: 5vh; }
-    .servicios .serv3 {
-      grid-area: serv3;
-      justify-self: left;
-      align-self: start;
-      margin-left: 5vh; }
-    .servicios .serv4 {
-      grid-area: serv4;
-      justify-self: left;
-      align-self: start; }
-    .servicios .serv5 {
-      grid-area: serv5;
-      justify-self: right;
-      align-self: start;
-      margin-bottom: 2vh; }
-    .servicios .serv6 {
-      grid-area: serv6;
-      justify-self: right;
-      align-self: start;
-      margin-right: 5vh; }
-    .servicios .serv7 {
-      grid-area: serv7;
-      justify-self: left;
-      align-self: start;
-      margin-left: 5vh; }
-    .servicios .serv8 {
-      grid-area: serv8;
-      justify-self: left;
-      align-self: start; }
-    .servicios p {
-      font-size: 0.9em; }
-    .servicios .boton {
-      grid-area: btn;
-      text-align: center;
-      text-justify: center; }
   /*ADN*/
-  .adn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0; }
-    .adn div {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 1vw 5vw 0 5vw;
-      padding: 10px 10px; }
-      .adn div .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        text-justify: center; }
-        .adn div .card img {
-          position: relative;
-          height: 10vh;
-          margin: 2vh 0; }
-  /*QUIENES SOMOS + STAFF*/
-  /*CLIENTES*/
   /*CONTACTO*/
-  .contacto {
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0; }
-  .contactoFlex {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .contactoGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "sede email wpp";
-    padding-bottom: 10vh; }
-    .contactoFlex .sede {
-      grid-area: sede; }
-    .contactoFlex .email {
-      grid-area: email; }
-    .contactoFlex .whatsapp {
-      grid-area: wpp; }
-    .contactoFlex p {
-      font-size: 18px; }
-  /*FOOTER*/
-  .footerDiv {
-    height: auto;
-    flex-direction: row;
-    justify-content: space-evenly; }
-    .footerDiv .divFooter1 {
+    grid-template-areas: "sede email wpp insta"; } }
+
+/*MEDIA QUERY - TABLET*/
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .mainHome {
+    grid-template-rows: 40vh auto auto auto auto;
+    /*SERVICIOS*/
+    /*AND*/
+    /*CONTACTO*/ }
+    .mainHome .services {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 20vw 20vw 20vw 20vw;
+      grid-template-areas: "encabezado encabezado" "uno dos" "tres cuatro" "cinco seis" "siete ocho"; }
+    .mainHome .adn div {
       flex-direction: column;
-      justify-items: start; }
-      .footerDiv .divFooter1 .logo {
-        height: 3vh; }
-      .footerDiv .divFooter1 .divFooter1div1 {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5vw; }
-  .whatsappfijo {
-    right: 3vh;
-    bottom: 5vh; } }
+      justify-content: center;
+      align-items: center; }
+      .mainHome .adn div .card2 {
+        margin: 5vh 0; }
+    .mainHome .contactoGrid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas: "sede email" "wpp insta"; } }

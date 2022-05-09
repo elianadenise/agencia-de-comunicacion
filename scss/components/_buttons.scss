@@ -1,0 +1,40 @@
+.whatsappfijo{
+    position: fixed;
+    display: inline-block;
+    filter: $sombraImg;
+    color: #fff;
+    transition: 1s;
+    right: 3vh;
+    bottom: 5vh;
+    
+    z-index: 19;
+
+    &:hover{
+        color: #25D366;
+    }
+}
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    transition: 1s;
+    display: flex;
+    border: 0.1vh solid white;
+    border-radius: $redondeado;
+    text-transform: $mayuscula;
+    font-weight: 700;
+    justify-self: center;
+    align-self: center;
+    margin: 0 0 10vh 0;
+
+    &:hover{
+        background-color: #A39CFF;
+        border: 0.1vh solid white;
+        color: #fff;
+    }
+
+    &::selection{
+        background-color: #A39CFF;
+    }
+}

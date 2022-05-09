@@ -1,0 +1,22 @@
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+
+    /** Logo **/
+
+    nav {
+        width: 100%;
+    
+        div a img {
+        width: 4vw;
+        margin-left: 20px;
+        }
+
+        .collapse{
+            flex-grow:0;
+        }
+    }
+}
+
+//nav con BS en partial components/_bootstrap

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,117 +26,229 @@
     <script src="https://kit.fontawesome.com/075ec74296.js" crossorigin="anonymous"></script>
     <!--animacion-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <!--js-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--titulo-->
     <title>NM Comunicaciones</title>
 </head>
-
 <body>
+    <!--HEADER-->
     <header>
-        <!--navbar-->
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <a href="index.html"><img src="images/NMlogo.png" alt="NM Comunicaciones"
-                        class="animate__animated animate__pulse animate__infinite"></a>
+        <!--NAV BS-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navBs">
+            <div class="container-fluid navBsMenu">
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li>
-                            <a href="index.html" class="linknav">INICIO</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navBsUl">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
-                        <li>
-                            <a href="#servicios" class="linknav">SERVICIOS</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
                         </li>
-                        <li>
-                            <a href="#quienessomos" class="linknav">QUIENES SOMOS</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/servicios.html">Clientes</a>
                         </li>
-                        <li>
-                            <a href="#clientes" class="linknav">CLIENTES</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sobremi.html">Staff</a>
                         </li>
-                        <li>
-                            <a href="#contactanos" class="linknav">CONTACTANOS</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!--FIN NAV BS-->
     </header>
+    <!--MAIN-->
+    <!--GRID MAIN Inicio-->
+    <main class="mainHome">
+        <!--whatsapp-->
+        <a
+            href="https://api.whatsapp.com/send?phone=5491133361088&text=%C2%A1Hola%20NM%20Comunicaciones!%20Quiero%20saber%20acerca%20de%20" class="whatsappfijo"><i
+                class="fa-brands fa-whatsapp fa-4x animate__animated animate__headShake"></i></a>
 
-    <main>
 
+        <div class="presentacion">
+            <div class="presentacionH">
+                <p>Somos</p>
+                <h1>Una agencia de comunicación independiente</h1>
+                <div class="presentacionHContainer">
+                    <div id="presentacionHContainerGif">
+                        <img src="images/start.gif" alt="">
+                    </div>
+                    <p id="subtitle">Creamos contenido para multiplataformas y experiencias disruptivas para el mundo
+                        digital.</p>
+                </div>
+            </div>
+            <div class="presentacionDownald">
+                <div class="presentacionDownaldGif">
+                    <a href="images/#brief-NMco.pdf" download="#brief-NMco" target="_blank"
+                        rel="noopener noreferrer"><img src="images/brief.gif" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <h2 class="animate__animated animate__flipInX animate__slow">Servicios</h2>
+            <div class="servicesContenido">
+                <div class="servicesContenidoGif"><img src="images/creacionDeContenido.gif" alt=""></div>
+                <h3>Generación de contenido</h3>
+                <p>Fotografías indoor/outdoor. Videos reels/IGTV. Producciones en estudio y búsqueda de locaciones
+                    exteriores. Dirección de Arte. Food Styling. Contratación de actores y/o modelos. Dron. Time lapse.
+                    Foto producto. Entrevistas.</p>
+            </div>
+            <div class="servicesPlaneacion">
+                <div class="servicesContenidoGif"><img src="images/planeacionEstrategica.gif" alt=""></div>
+                <h3>Planeación estratégica</h3>
+                <p>Análisis de marca, diagnóstico, medición y percepción. Consultoría estratégica en comunicación.
+                    Definición de objetivos, búsqueda y aplicación de recursos para cumplirlos. Aplicación de identidad
+                    de marca con herramientas nativas de todas las plataformas digitales. Análisis de la competencia
+                    (FODA). Estrategia de contenido. </p>
+            </div>
+            <div class="servicesWeb">
+                <div class="servicesContenidoGif"><img src="images/serviciosWeb.gif" alt=""></div>
+                <h3>Servicios web</h3>
+                <p>Posicionamiento SEO. UX y UI. E-commerce con carrito. Landing Page. Back office y Panel de Admin.
+                    Mantenimiento y servicio técnico. Linktree. Casilla de mails.</p>
+            </div>
+            <div class="servicesPubli">
+                <div class="servicesContenidoGif"><img src="images/publicidad.gif" alt=""></div>
+                <h3>Publicidad</h3>
+                <p>Establecimiento de indicadores claves de rendimiento (KPI). Optimización de inversión publicitaria en
+                    el ecosistema digital. Generación de campañas con piezas gráficas especializadas para maximizar las
+                    ganancias. Publicidad SEM. Medición del impacto. Publicidad ATL y BTL. Email marketing.</p>
+            </div>
+            <div class="servicesPr">
+                <div class="servicesContenidoGif"><img src="images/pr.gif" alt=""></div>
+                <h3>PR</h3>
+                <p>Auditoría de medios. Desarrollo de estrategias de comunicación. Relaciones Públicas corporativas.
+                    Prevención, manejo y gestión de crisis. Branding corporativo. Embajadores de contenido. Media
+                    Training. Planes de contingencia. Gestión de campañas one shot. Estrategias de lobbying. Networking.
+                    Influencers.
+                </p>
+            </div>
+            <div class="servicesEventos">
+                <div class="servicesContenidoGif"><img src="images/eventos.gif" alt=""></div>
+                <h3>Eventos</h3>
+                <p>Organización integral de eventos virtuales, híbridos y presenciales. Presencia de grandes
+                    personalidades influyentes en el negocio. Event planner. Contacto con prensa. Contratación de
+                    personal calificado.</p>
+            </div>
+            <div class="servicesDigital">
+                <div class="servicesContenidoGif"><img src="images/socialmedia.gif" alt=""></div>
+                <h3>Digital & Social Media Manager</h3>
+                <p>Desarrollo de estrategias de comunicación. Definición de público objetivo. Identificación de
+                    propuestas de valor. Desarrollo de estrategia, planeamiento y creatividad de contenidos. Diseño de
+                    planes integrales. Insights de mercado. Community Management. Media planning. </p>
+            </div>
+            <div class="servicesProdu">
+                <div class="servicesContenidoGif"><img src="images/disenografico.gif" alt=""></div>
+                <h3>Producción gráfica</h3>
+                <p>Diseño gráfico. Desarrollo de marca. Brandbooks. Guidelines. Re-Branding. Material gráfico integral
+                    para redes sociales. Identidad visual. Logos, Manual de marca, Catálogos, Packaging. Registro de
+                    marca. Material imprimible.</p>
+            </div>
+        </div>
+        <div class="clients">
+            <div class="container">
+                <h2>Clientes</h2>
+                <section class="customer-logos slider">
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/mancha.png"></a>
+                    </div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/3.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/logo.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/mancha.png"></a>
+                    </div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/3.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/logo.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/mancha.png"></a>
+                    </div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/3.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/logo.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/mancha.png"></a>
+                    </div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/3.png"></a></div>
+                    <div class="slide"><a href="http://google.com" target="_blank"><img src="images/logo.png"></a></div>
+                </section>
+            </div>
+        </div>
         <!--nuestroadn-->
         <div class="adn">
             <p class="tituloAdn">Nuestro</p>
             <h2 class="tituloAdn2 h2Black">ADN</h2>
             <div>
-
+        
                 <div class="card animate__animated animate__fadeInUp">
                     <img src="images/comunicacion.gif" alt="Comunicación">
                     <h4>Comunicación</h4>
                     <p class="fuente--color-black">Comunicar para enriquecer la vida de tus clientes, lograr la
-                        identificación de tu público
+                        iden&shy;tificación de tu público
                         objetivo, transmitir tu diferencia y vender. </p>
                 </div>
-
-
-                <div class="card animate__animated animate__fadeInUp">
+        
+        
+                <div class="card card2 animate__animated animate__fadeInUp">
                     <img src="images/vision.gif" alt="Visión a largo plazo">
                     <h4>Visión de largo plazo</h4>
                     <p class="fuente--color-black">Creamos campañas a nivel macro con objetivos y estrategias
                         especiales, qué nos va a servir para
-                        mejorar el rendimiento de tu empresa. </p>
+                        mejorar el rendimiento de tu em&shy;presa. </p>
                 </div>
-
-
+        
+        
                 <div class="card animate__animated animate__fadeInUp">
                     <img src="images/creatividad.gif" alt="Creatividad">
                     <h4>Creatividad</h4>
-                    <p class="fuente--color-black">Lleva tu instagram a otro nivel con nuestros profesionales, rompe
+                    <p class="fuente--color-black">Lleva tus redes sociales a otro nivel con nuestros profesionales, rompe
                         las barreras de la comunicación
-                        con unas tremendas estrategias digitales.</p>
+                        con unas tremendas estrategias digi&shy;tales.</p>
                 </div>
-
+        
             </div>
         </div>
-
+        
         <!--contacto-->
-
+        
         <div class="contacto">
             <p class="titulo1">¿Estás buscando una solución digital inovadora?</p>
             <h2 class="titulo2">¡Contactanos!</h2>
         </div>
+        
+        <div class="contactoGrid">
 
-        <div class="contactoFlex">
-            <!--sedes-->
             <div class="sede">
                 <div>
                     <i class="fa-solid fa-location-dot fa-xl me-3 mb-0"></i>
                     <h3>Sedes</h3>
                 </div>
-
+        
                 <p>Capital federal, Buenos Aires, Argentina.</p>
                 <p>Bariloche, Río Negro, Argentina.</p>
-
+        
             </div>
-
-            <!--e-mail-->
+        
             <div class="email">
                 <div>
                     <i class="fa-solid fa-envelope fa-xl me-3 mb-0"></i>
                     <h3>E-mail</h3>
                 </div>
-
+        
                 <p>info@agencianmco.com</p>
             </div>
 
-            <!--whatsapp-->
             <div class="whatsapp">
                 <div>
-                    <i class="fa-brands fa-whatsapp fa-xl me-3 mb-0"></i>
+                    <i class="fa-brands fa-whatsapp fa-2xl me-3 mb-0"></i>
                     <h3>Whatsapp</h3>
                 </div>
                 <p><a href="https://api.whatsapp.com/send?phone=5491133361088&text=%C2%A1Hola%20NM%20Comunicaciones!%20Quiero%20saber%20acerca%20de%20"
@@ -150,15 +261,19 @@
                         11 5933 0535</a></p>
             </div>
 
+            <div class="instagram">
+                <div>
+                    <i class="fa-brands fa-instagram fa-2xl me-3 mb-0"></i>
+                    <h3>Instagram</h3>
+                </div>
+                <p><a href="https://www.instagram.com/nmcomunicaciones_/" class="a3">@nmcomunicaciones_</a></p>
+            </div>
+        
         </div>
 
-        <!--whatsapp-->
+        <a href="#" class="btn">¡COMPLETÁ EL FORMULARIO!</a>
 
-        <a
-            href="https://api.whatsapp.com/send?phone=5491133361088&text=%C2%A1Hola%20NM%20Comunicaciones!%20Quiero%20saber%20acerca%20de%20" class="whatsappfijo"><i
-                class="fa-brands fa-whatsapp fa-4x animate__animated animate__headShake animate__infinite"></i></a>
     </main>
-
     <footer>
         <div class="footerDiv">
             <!--seccion1-->
@@ -166,13 +281,12 @@
                 <a href="index.html"><img src="images/NMlogofooter.png" alt="NM Comunicaciones" class="logo">
                     <p class="mb-0 ms-1">NM Comunicaciones</p>
                 </a>
-
+    
                 <div class="divFooter1div1 mt-3">
-                    <p>Creamos contenido para <br> multiplataformas y experiencias disruptivas <br> para el mundo
-                        digital.</p>
+                    <p>Talk smart.</p>
                 </div>
             </div>
-
+    
             <!--seccion2-->
             <div class="divFooter2">
                 <p>LINKS ÚTILES</p>
@@ -183,39 +297,42 @@
                 </div>
                 <div><i class="fa-solid fa-angle-right fa-sm"></i><a href="#contactanos" class="l4">⠀CONTACTANOS</a>
                 </div>
-
+    
             </div>
-
+    
             <!--seccion3-->
             <div class="divFooter3">
                 <p>SIGAMOS CONECTADOS</p>
                 <div class="divFooter3div1">
-                    <!--facebook-->
-                    <a href="https://www.facebook.com/nmcomunicacionesok" class="e1"><i
-                            class="fa-brands fa-facebook-f redesSocialesLogo mb-0"></i>⠀@NM_COMUNICACIONES</a>
                     <!--instagram-->
                     <a href="https://www.instagram.com/nmcomunicaciones_/" class="e2"><i
-                            class=" fa-brands fa-instagram redesSocialesLogo mb-0"></i>⠀@NMCOMUNICACIONES_</a>
+                        class=" fa-brands fa-instagram redesSocialesLogo mb-0"></i>⠀@nmcomunicaciones_</a>
+                    <!--facebook-->
+                    <a href="https://www.facebook.com/nmcomunicacionesok" class="e1"><i
+                            class="fa-brands fa-facebook-f redesSocialesLogo mb-0"></i>⠀@NM_comunicaciones</a>
                     <!--tiktok-->
                     <a href="https://www.tiktok.com/@nm_comunicaciones" class="e3"><i
-                            class="fa-brands fa-tiktok redesSocialesLogo mb-0"></i>⠀@NM_COMUNICACIONES</a>
+                            class="fa-brands fa-tiktok redesSocialesLogo mb-0"></i>⠀@NM_comunicaciones</a>
                     <!--linkedin-->
                     <a href="https://www.linkedin.com/company/nmcomunicaciones/" class="e4"><i
-                            class="fa-brands fa-linkedin-in redesSocialesLogo mb-0"></i>⠀@NMCOMUNICACIONES</a>
+                            class="fa-brands fa-linkedin-in redesSocialesLogo mb-0"></i>⠀@nmcomunicaciones</a>
                 </div>
             </div>
         </div>
-
+    
         <!--créditos-->
-
+    
         <div class="credito">
-
+    
             <p class="copyright mt-1">COPYRIGHT © NM COMUNICACIONES 2022</p>
             <div class="divLineal"></div>
             <p class="fuente--color-white">Desarrollado con⠀<i class="fa-regular fa-xs fa-heart fa-beat"></i>⠀por <a
                     href="https://www.linkedin.com/in/malenadiazlopez/" class="a1"> Malena </a> y <a
                     href="https://www.linkedin.com/in/elianadnavarro/" class="a2"> Eliana</a></p>
         </div>
+    
+    </footer>
+    <script src="https://kit.fontawesome.com/075ec74296.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>

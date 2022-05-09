@@ -1,0 +1,59 @@
+/*MEDIA QUERY - DESKTOP*/
+@media screen and (min-width: 769px){
+
+    /*ADN*/
+
+    /*CONTACTO*/
+    .contactoGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "sede email wpp insta";
+    }
+        
+}
+
+
+/*MEDIA QUERY - TABLET*/
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .mainHome{
+        grid-template-rows: 40vh auto auto auto auto;
+
+        /*SERVICIOS*/
+        .services{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 20vw 20vw 20vw 20vw;
+            grid-template-areas: "encabezado encabezado"
+                             "uno dos"
+                             "tres cuatro"
+                             "cinco seis"
+                             "siete ocho";
+        }
+
+        /*AND*/
+        .adn{
+            div{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .card2{
+                    margin:5vh 0;
+                }
+            }
+        }
+
+
+        /*CONTACTO*/
+        .contactoGrid{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "sede email"
+                                "wpp insta";
+    }
+    }
+
+
+
+
+}
