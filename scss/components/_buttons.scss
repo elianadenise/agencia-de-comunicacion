@@ -1,40 +1,35 @@
-.whatsappfijo{
+.whatsappfijo {
     position: fixed;
-    display: inline-block;
-    filter: $sombraImg;
-    color: #fff;
-    transition: 1s;
-    right: 3vh;
-    bottom: 5vh;
-    
+    bottom: 20px;
+    right: 20px;
     z-index: 19;
-
-    &:hover{
-        color: #25D366;
-    }
-}
-
-.btn{
-    text-decoration: none;
-    color: #fff;
     background-color: transparent;
-    transition: 1s;
-    display: flex;
-    border: 0.1vh solid white;
-    border-radius: $redondeado;
-    text-transform: $mayuscula;
-    font-weight: 700;
-    justify-self: center;
-    align-self: center;
-    margin: 0 0 10vh 0;
+    border: none;
 
-    &:hover{
-        background-color: #A39CFF;
-        border: 0.1vh solid white;
+    i {
+        filter: drop-shadow(0 0.2vh 0.2vh #797979);
         color: #fff;
     }
 
-    &::selection{
-        background-color: #A39CFF;
+    i:hover {
+        color: #25D366; 
+        transition: 1s;
+    }
+}
+
+.contacto {
+    .btn {
+        color: #fff;
+        border: 3px solid;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+        padding: 10px 20px;
+
+        &:hover{
+            transform: scale(1.1);
+            border-image: linear-gradient(to bottom, #67EBFA, #CE97FB 100%) 1;
+            transition: 1s;
+        }        
     }
 }

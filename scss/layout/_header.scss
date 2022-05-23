@@ -1,21 +1,13 @@
 header {
     position: sticky;
     top: 0px;
-    z-index: 10;
+    z-index: 20;
 
     /** Logo **/
 
-    nav {
-        width: 100%;
-    
-        div a img {
+    nav div a img {
         width: 4vw;
         margin-left: 20px;
-        }
-
-        .collapse{
-            flex-grow:0;
-        }
     }
 }
 

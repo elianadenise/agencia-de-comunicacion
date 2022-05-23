@@ -1,59 +1,478 @@
-/*MEDIA QUERY - DESKTOP*/
-@media screen and (min-width: 769px){
+/* MEDIA QUERY - TABLET y DESKTOP S */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
 
-    /*ADN*/
-
-    /*CONTACTO*/
-    .contactoGrid{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "sede email wpp insta";
-    }
-        
-}
-
-
-/*MEDIA QUERY - TABLET*/
-
-@media screen and (min-width: 600px) and (max-width: 768px) {
-    .mainHome{
-        grid-template-rows: 40vh auto auto auto auto;
-
-        /*SERVICIOS*/
-        .services{
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto 20vw 20vw 20vw 20vw;
-            grid-template-areas: "encabezado encabezado"
-                             "uno dos"
-                             "tres cuatro"
-                             "cinco seis"
-                             "siete ocho";
+    header { 
+        .bg-dark {
+            height: auto;
         }
 
-        /*AND*/
-        .adn{
-            div{
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        nav div a img {
+            width: 50px;
+            margin-left: 0px;
+        }
 
-                .card2{
-                    margin:5vh 0;
+        .bg-dark {
+        
+            .navBsUl {
+                font-size: 16px;
+                a:hover {
+                    border-top: solid 3px transparent;
+                }
+            }
+        }
+    }
+
+    .mainHome {
+        grid-template-rows: 400px auto auto auto auto;
+
+        .presentacionContenedor {
+
+            .presentacionH {
+                
+                p {                    
+                    font-size: 35px;
+                    margin-left: -5px;
+                    margin-bottom: -13px;
+                }
+
+                h1 {
+                    font-size: 45px;
+                }
+
+                .presentacionP {
+                    width: auto;
+                    bottom: auto;
+
+                    #presentacionPGif {
+                        width: 60px;
+                        padding-left: 3px;
+                    }
+                    
+                    #presentacionPsubtitulo {
+                        font-size: 13px;
+                        line-height: 1.4;
+                        padding: 0px 0px 15px 15px;
+                    }
+                }
+            }            
+        }
+
+        #servicios { 
+            .services {
+                display: none;
+            }
+
+            .serviciosMobile {
+                display: block;
+                padding: 10px;
+                margin: 0px 70px 40px 70px;
+
+                .hSeccion {
+                    font-size: 40px;
+                    margin: 30px 0px;
+                }
+
+                .accordion-item {
+                    border-color: rgb(42, 42, 42);
+                    box-shadow: rgb(54, 54, 54) 0px 0px 10px;
+                    background-color: $background-color-principal;
+
+                    .accordion-button {
+                        background-image: linear-gradient(45deg, #ce97fb, #f6a5eb9d, #9bfbe192,#67ebfa);
+                        color: $background-color-principal;
+                        font-weight: 700;
+                        border-radius: 5px 5px 0px 0px;
+                        position: relative;
+        
+                        .serviciosMobileGif {
+                            width: 50px;
+                            margin-right: 10px;
+
+                            img {
+                                border-radius: 100px;
+                                border: solid 1px black;
+                            }
+
+                        }
+
+                        .serviciosMobileArrow {
+                            width: 14px;
+                            position: absolute;
+                            right: 20px;
+                            transition: 0.7s;
+                        }                        
+                    }
+
+                    .collapsed {
+                        background-image: none;
+                        background-color: $background-color-principal;
+                        color: $color-principal;
+                    }
+
+                    .accordion-button::after { 
+                        background-image: none;
+                    }
+
+                    .accordion-button:not(.collapsed)::after {
+                        background-image: none;
+                    }
+
+                    .accordion-button:focus {
+                        box-shadow: none;
+                        
+                        .serviciosMobileArrow {
+                            transform: rotate(90deg);
+                            
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    border: solid 4px;
+                    border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+                    border-top: none;
+                    background-color: $background-color-principal;
+                    color: $color-principal;                    
                 }
             }
         }
 
+        .adn {
 
-        /*CONTACTO*/
-        .contactoGrid{
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas: "sede email"
-                                "wpp insta";
+            .tituloAdn {
+                font-size: 35px;
+            }
+    
+            .tituloAdn2 {
+                font-size: 50px;
+            }
+
+            div {
+
+                .card {
+                    margin: 0px 5px;
+                    height: auto;
+                    width: 30%;
+
+                    img {
+                        width: 80px;
+                    }
+
+                    h4 {
+                        font-size: 17px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                    
+                }
+            }
+        }
+
+        .clients h2 {
+            font-size: 50px;
+        }
+
+        .contacto {
+
+            .contactoH h2 {
+                font-size: 50px;
+            }
+
+            .contactoVias {
+                margin-bottom: 10px;
+
+                .contactoViasItem {
+                    width: 45%;
+                    margin-bottom: 40px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p, a {
+                    font-size: 16px;
+                }
+
+                i {
+                    padding-bottom: 8px;
+                }
+            }
+        }
     }
+}
+
+/* MEDIA QUERY - MOBILE */
+@media only screen and (max-width: 600px) {
+
+    header { 
+        .bg-dark {
+            height: auto;
+        }
+
+        nav div a img {
+            width: 14vw;
+            margin-left: 0px;
+        }
+
+        .bg-dark {
+        
+            .navBsUl {
+                font-size: 16px;
+                a:hover {
+                    border-top: solid 3px transparent;
+                }
+            }
+        }
     }
 
+    .mainHome { 
+        grid-template-rows: 85vh auto auto auto auto;
 
+        .presentacionContenedor {
+            align-content: flex-start;
+            padding: 0px;
 
+            .presentacionH {
+                width: 85%;
+                height: 50%;
+                padding-top: 30px;
 
+                p {                    
+                    font-size: 30px;
+                    margin-left: -5px;
+                    margin-bottom: -13px;
+                }
+
+                h1 {
+                    font-size: 40px;
+                }
+
+                .presentacionP {
+                    margin-top: 10px;
+                    bottom: auto;
+                    width: auto;
+
+                    #presentacionPGif {
+                        width: 60px;
+                        padding-left: 3px;
+                    }
+                    
+                    #presentacionPsubtitulo {
+                        font-size: 13px;
+                        line-height: 1.4;
+                        padding: 0px 0px 15px 15px;
+                    }
+                }
+            }
+
+            .presentacionDescarga {
+                width: 85%;
+                padding: 0px;
+                margin-top: 10px;
+
+                .presentacionDescargaGif {
+                    width: 85%;
+                    height: auto;
+                    margin: 0px 7%;
+                }
+            }
+
+            
+        }
+
+        #servicios { 
+            .services {
+                display: none;
+            }
+
+            .serviciosMobile {
+                display: block;
+                padding: 10px;
+                margin-bottom: 40px;
+
+                .hSeccion {
+                    font-size: 40px;
+                    margin: 30px 0px;
+                }
+
+                .accordion-item {
+                    border-color: rgb(42, 42, 42);
+                    box-shadow: rgb(54, 54, 54) 0px 0px 10px;
+                    background-color: $background-color-principal;
+
+                    .accordion-button {
+                        background-image: linear-gradient(45deg, #ce97fb, #f6a5eb9d, #9bfbe192,#67ebfa);
+                        color: $background-color-principal;
+                        font-weight: 700;
+                        border-radius: 5px 5px 0px 0px;
+                        position: relative;
+        
+                        .serviciosMobileGif {
+                            width: 50px;
+                            margin-right: 10px;
+
+                            img {
+                                border-radius: 100px;
+                                border: solid 1px black;
+                            }
+
+                        }
+
+                        .serviciosMobileArrow {
+                            width: 14px;
+                            position: absolute;
+                            right: 20px;
+                            transition: 0.7s;
+                        }                        
+                    }
+
+                    .collapsed {
+                        background-image: none;
+                        background-color: $background-color-principal;
+                        color: $color-principal;
+                    }
+
+                    .accordion-button::after { 
+                        background-image: none;
+                    }
+
+                    .accordion-button:not(.collapsed)::after {
+                        background-image: none;
+                    }
+
+                    .accordion-button:focus {
+                        box-shadow: none;
+                        
+                        .serviciosMobileArrow {
+                            transform: rotate(90deg);
+                            
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    border: solid 4px;
+                    border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+                    border-top: none;
+                    background-color: $background-color-principal;
+                    color: $color-principal;                    
+                }
+            }
+        }
+
+        .adn {
+            padding-top: 20px;
+            
+            .tituloAdn{
+                font-size: 40px;
+                margin-bottom: -30px;
+            }
+    
+            .tituloAdn2 {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            div {
+    
+                .card {
+                    width: 90%;
+                    margin: 20px;
+                    height: auto;
+                    padding: 20px 30px;
+
+                    img {
+                        width: 100px;
+                        margin-bottom: 20px;
+                    }
+
+                    h4 {
+                        font-size: 25px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                    }
+
+                }
+            }
+        }
+
+        .clients h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .contacto {
+            padding-bottom: 50px;
+
+            .contactoH {
+                p {
+                    font-size: 16px;
+                    margin-bottom: -10px;
+                    text-justify: center;
+                    padding: 0 7vh;
+                }
+
+                h2 {
+                    font-size: 40px;
+                }
+            }
+
+            .contactoVias {
+                margin: 10px 0px;
+
+                .contactoViasItem {
+                    width: 90%;
+                    padding: 25px 0px;
+                    border-top: solid 1px rgb(74, 74, 74);
+                    margin-bottom: 0px;
+
+                    i {
+                        padding-bottom: 7px;
+                        font-size: 18px;
+                    }
+
+                    h3 {
+                        font-size: 19px;
+                    }
+    
+                    p { 
+                        font-size: 16px;
+                    }
+
+                }
+
+                .instagram {
+                    border-top: none;
+                }
+            }
+        }
+
+        .formulario .formularioForm {
+            max-width: 90%;
+        }
+    }
+
+    .divFooter {
+        flex-direction: column;
+        align-items: start;
+        grid-row-gap: 30px;
+        padding-top: 50px;
+        padding-left: 10vh;
+        padding-right: 5vh;
+
+        .divFooter1 {
+            a {    
+                text-align: center;
+                text-justify: center;
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
 }

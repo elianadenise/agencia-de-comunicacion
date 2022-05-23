@@ -5,7 +5,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 95vh auto 100vh auto 0vh;
+    grid-template-rows: 95vh auto auto auto auto;
     grid-template-areas: "presentacion"
                          "servicios"
                          "adn"
@@ -14,16 +14,15 @@
 
 
     /** Presentación **/
-
-    .presentacion {
+    .presentacionContenedor {
         grid-area: presentacion;
         width: 100%;
         color: #fff;
         background: linear-gradient(45deg,#67EBFA,#9BFBE1,#FDDF7E,#FAA990, #F6A5EB, #CE97FB);
         background-size: 400% 400%;
-        position: relative;
         animation: cambiar 10s ease-out infinite;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         padding-bottom: 30px;
@@ -38,6 +37,8 @@
             width: 50%;
             align-self: flex-start;
             padding-top: 5vw;
+            position: relative;
+            height: 100%;
             
             p {
             font-family: $font-secundaria;
@@ -56,7 +57,7 @@
                 line-height: 0.9;
             }
 
-            .presentacionHContainer {
+            .presentacionP {
                 display: flex;
                 height: auto;
                 width: 70%;
@@ -65,16 +66,10 @@
                 background-color: rgba(255, 255, 255, 0.441);
                 border-radius: 15px;
                 margin-top: 9vw;
+                position: absolute;
+                bottom: 60px;
 
-                #subtitle {
-                    font-family: $font-principal;
-                    font-style: normal;
-                    font-size: 1.2vw;
-                    color: rgb(0, 0, 0);
-                    padding-left: 30px;
-                }
-
-                #presentacionHContainerGif {
+                #presentacionPGif {
                     width: 3.5vw;
                     height: 3.5vw;
     
@@ -83,17 +78,22 @@
                     }
                 }
 
+                #presentacionPsubtitulo {
+                    font-family: $font-principal;
+                    font-style: normal;
+                    font-size: 1.2vw;
+                    color: rgb(0, 0, 0);
+                    padding-left: 30px;
+                }
             }
-
-            
         }
 
-        .presentacionDownald {
+        .presentacionDescarga {
             text-align: center;
             align-self: flex-end;
             padding-bottom: 60px;
-        
-            .presentacionDownaldGif {
+            
+            .presentacionDescargaGif {
                 width: 23vw;
                 height: 23vw;
                 box-shadow: rgba(0, 0, 0, 0.612) 10px 10px 10px;
@@ -107,305 +107,311 @@
     }
 
     /** Sevicios **/
-
-    .services {
+    #servicios {
         grid-area: servicios;
-        padding: 30px 10px;
-        background-color: black;
-        display: grid;
-        grid-template-columns: 23% 23% 23% 23%;
-        grid-template-rows: auto 20vw 20vw;
-        grid-template-areas: "encabezado encabezado encabezado encabezado"
-                             "uno dos tres cuatro"
-                             "cinco seis siete ocho";
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 3vw;
-    
-        h2 {
-            grid-area: encabezado;
-            margin: 40px;
-        }
 
-        /*** Sevicios: animaciones ***/
-
-        p, h3 {
-            transition: all 100ms;
-        }
-
-        @keyframes movimiento {
-            from {
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.5 !important;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes movimientoinverso {
-            from {
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.5 !important;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /*** Sevicios: cards y hover ***/
-
-        .servicesContenido {
-            grid-area: uno;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(0, 0, 0);
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
+        .services {
+            padding: 30px 10px;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-template-rows: auto 20vw 20vw;
+            grid-template-areas: "encabezado encabezado encabezado encabezado"
+                                "uno dos tres cuatro"
+                                "cinco seis siete ocho";
             align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 3vw;
         
-            h3 {
-                @extend %titulosServicios;
+            h2 {
+                grid-area: encabezado;
+                margin: 40px;
             }
 
-            p {
-                @extend %textoServicios;
+            /*** Sevicios: animaciones ***/
+
+            p, h3 {
+                transition: all 100ms;
             }
 
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
+            @keyframes movimiento {
+                from {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5 !important;
+                }
+                to {
+                    opacity: 1;
+                }
             }
 
-        }
+            @keyframes movimientoinverso {
+                from {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5 !important;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
 
-        .servicesContenido:hover {
-            border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
-            @extend %servicesContenidohover;            
-        }
+            /*** Sevicios: cards y hover ***/
 
-        .servicesPlaneacion {
-            grid-area: dos;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            padding-top: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
+            .servicesContenido {
+                grid-area: uno;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0, 0, 0);
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
             
-            h3 {
-                @extend %titulosServicios;
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+
             }
 
-            p {
-                @extend %textoServicios;
+            .servicesContenido:hover {
+                border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+                @extend %servicesContenidohover;            
             }
 
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
+            .servicesPlaneacion {
+                grid-area: dos;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                padding-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+                
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+
             }
+
+            .servicesPlaneacion:hover {
+                border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesWeb {
+                grid-area: tres;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesWeb:hover {
+                border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesPubli {
+                grid-area: cuatro;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesPubli:hover {
+                border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesPr {
+                grid-area: cinco;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+                padding-top: 5px;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesPr:hover {
+                border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesEventos {
+                grid-area: seis;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesEventos:hover {
+                border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesDigital {
+                grid-area: siete;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesDigital:hover {
+                border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
+            .servicesProdu {
+                grid-area: ocho;
+                width: 100%;
+                height: 100%;
+                border: solid 6px transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                animation: movimientoinverso 2s;
+
+                h3 {
+                    @extend %titulosServicios;
+                }
+
+                p {
+                    @extend %textoServicios;
+                }
+
+                .servicesContenidoGif {
+                    @extend %servicesContenidoGif; 
+                }
+            }
+
+            .servicesProdu:hover {
+                border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
+                @extend %servicesContenidohover;
+            }
+
 
         }
 
-        .servicesPlaneacion:hover {
-            border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
-            @extend %servicesContenidohover;
+        .serviciosMobile {
+            display: none;
         }
-
-        .servicesWeb {
-            grid-area: tres;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesWeb:hover {
-            border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-        .servicesPubli {
-            grid-area: cuatro;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesPubli:hover {
-            border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-        .servicesPr {
-            grid-area: cinco;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-            padding-top: 5px;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesPr:hover {
-            border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-        .servicesEventos {
-            grid-area: seis;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesEventos:hover {
-            border-image: linear-gradient(to bottom, #9BFBE1, #F6A5EB 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-        .servicesDigital {
-            grid-area: siete;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesDigital:hover {
-            border-image: linear-gradient(to bottom, #CE97FB, #67EBFA 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-        .servicesProdu {
-            grid-area: ocho;
-            width: 100%;
-            height: 100%;
-            border: solid 6px transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            animation: movimientoinverso 2s;
-
-            h3 {
-                @extend %titulosServicios;
-            }
-
-            p {
-                @extend %textoServicios;
-            }
-
-            .servicesContenidoGif {
-                @extend %servicesContenidoGif; 
-            }
-        }
-
-        .servicesProdu:hover {
-            border-image: linear-gradient(to bottom, #FDDF7E, #FAA990 100%) 1;
-            @extend %servicesContenidohover;
-        }
-
-
     }
 
     /** ADN **/
@@ -417,7 +423,7 @@
         padding-bottom: 5vw;
         text-align: center;        
 
-        .tituloAdn{
+        .tituloAdn {
             font-family: $font-secundaria;
             color: rgba(255, 255, 255, 0.605);
             font-size: 4vw;
@@ -437,27 +443,26 @@
             justify-content: center;
             margin-top: 3vw;
             font-family: $font-principal;
-            font-size: 5vw;
+            flex-wrap: wrap;
 
             .card {
                 display: flex;
                 flex-direction: column;
-                height: 25vw;
-                width: 23vw;
-                justify-content: start;
+                height: auto;
+                width: 25%;
+                justify-content: flex-start;
                 align-items: center;
                 background-color: rgba(255, 255, 255, 0.441);
                 border-radius: 15px;
-                padding: 0vh 4vh;
-                margin: 0vh 4vh;
+                padding: 4vh 4vh 2vh 4vh;
+                margin: 0vh 10px;
                 border: none;
                 box-shadow: rgba(77, 77, 77, 0.221) 0px 0px 10px;
-
 
                 img {
                     border-radius: 100px;
                     width: 7vw;
-                    margin: 2vw 0vw 1vw 0vw;
+                    margin: 1vw;
                 }
 
                 h4 {
@@ -480,118 +485,80 @@
     /** Clientes: en partial _carousel **/
 
     /** Contacto **/
-    .contacto{
+    .contacto {
+        grid-area: contacto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        .titulo1{
-            font-family: 'Times New Roman', Times, serif;
-            color: rgba(255, 255, 255, 0.605);
-            font-size: 40px;
-            font-style: italic;
-            margin-bottom: -35px;
-            margin-left: -15px;
+        padding: 30px 0px 89px 0px;
+    
+        .contactoH {
             text-align: center;
-        }
 
-        .titulo2{
-            margin-top: 3vh;
-            font-size: 65px;
-        }
-    }
-
-    .contactoGrid{
-        display: grid;
-        margin: 10vh 0 5vh 0;
-
-        .sede{
-            grid-area: sede;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: center;
-        }
-
-        .email{
-            grid-area: email;
-            @extend .sede;
-        }
-
-        .whatsapp{
-            grid-area: wpp;
-            @extend .sede;
-        }
-
-        .instagram{
-            grid-area: insta;
-            @extend .sede;
-        }
-
-        div{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2vh;
-        }
-
-        p, h3, i{
-            color: #fff;
-            line-height: 1.2;
-                
-            .a1{
-                text-decoration: none;
-                color: #fff;
-                transition: 1s;
-
-                &:hover{
-                    color: #CE97FB;
-                }
+            p {
+                font-family: $font-secundaria;
+                color: $color-principal;
+                opacity: 0.5;
+                font-size: 30px;
+                font-style: italic;
+                margin-bottom: -15px;
             }
 
-            .a2{
-                @extend .a1;
-
-                &:hover{
-                    color: #9BFBE1;
-                }
-            }
-
-            .a3{
-                @extend .a1;
-
-                &:hover{
-                    color: #FAA990;
-                }
-            }
-        }
-        
-    }
-}
-
-
-/*FOOTER*/
-.footerDiv {
-    height: auto;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family: $font-principal;
-
-    .divFooter1 {
-        flex-direction: column;
-        justify-items: start;
-
-        .logo {
-            width: 3vw;
         }
 
-        .divFooter1div1 {
+        .contactoVias {
+            margin: 70px 0px 50px 0px;
             display: flex;
-            flex-direction: column;
-            margin-bottom: 5vw;
+            justify-content: space-around;
+            flex-wrap: wrap-reverse;
+            width: 100%;
+
+            .contactoViasItem {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 2vh;
+                }
+            
+                p, h3, i, a {
+                    color: $color-principal;
+                    line-height: 1.2;
+                        
+                    .a1{
+                        color: $color-principal;
+                        transition: 1s;
+
+                        &:hover{
+                            color: #CE97FB;
+                        }
+                    }
+
+                    .a2{
+                        @extend .a1;
+
+                        &:hover{
+                            color: #9BFBE1;
+                        }
+                    }
+
+                    .a3{
+                        @extend .a1;
+
+                        &:hover{
+                            color: #FAA990;
+                        }
+                    }
+                }
+            }
+            
         }
     }
-
 }
